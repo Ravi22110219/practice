@@ -58,7 +58,10 @@ const AdmissionForm = () => {
                     />
                 </div>
                 <div className={styles.formContainer}>
-                    <h2 className={styles.formHeading}><AiOutlineForm style={{marginRight:"10px", marginBottom:"5px"}}/>Fill This Form</h2>
+                    <div className={styles.formHeading}>
+                        <AiOutlineForm className='pt-1'/>
+                    <h2 className='text-black'>Fill This Form</h2></div>
+                    
                     <form onSubmit={handleSubmit}>
                         <div className={styles.formGroup}>
                             <label htmlFor="name">Name:</label>
@@ -69,6 +72,7 @@ const AdmissionForm = () => {
                                 value={formData.name}
                                 onChange={handleChange}
                                 required
+                                className='p-1'
                             />
                         </div>
                         <div className={styles.formGroup}>
@@ -80,6 +84,7 @@ const AdmissionForm = () => {
                                 value={formData.email}
                                 onChange={handleChange}
                                 required
+                                className='p-1'
                             />
                         </div>
                         <div className={styles.formGroup}>
@@ -91,6 +96,7 @@ const AdmissionForm = () => {
                                 value={formData.phone}
                                 onChange={handleChange}
                                 required
+                                className='p-1'
                             />
                         </div>
                         <div className={styles.formGroup}>
@@ -101,11 +107,13 @@ const AdmissionForm = () => {
                                 value={formData.course}
                                 onChange={handleChange}
                                 required
+                                className='p-1'
                             >
                                 <option value="">Select a course</option>
                                 <option value="JEE Main">JEE Main</option>
-                                <option value="JEE Advance">JEE Advance</option>
+                                <option value="JEE Advance">JEE Advanced</option>
                                 <option value="NEET/PMT">NEET/PMT</option>
+                                <option value="NEET/PMT">Test Series</option>
                                 <option value="Counselling">Counselling</option>
                             </select>
                         </div>
@@ -116,6 +124,7 @@ const AdmissionForm = () => {
                                 name="message"
                                 value={formData.message}
                                 onChange={handleChange}
+                                className='p-1'
                             />
                         </div>
                         <button type="submit" className={styles.submitButton}>Submit</button>

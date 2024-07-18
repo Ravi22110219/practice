@@ -55,8 +55,9 @@
 
 .navText h1 {
   color: #0b1c39;
-  font-size: calc(18px + 0.5vw);
-  font-weight: 600;
+  font-size: calc(18px + .6vw);
+  padding-bottom: 5px;
+  font-weight: 700;
  
 }
 
@@ -213,7 +214,7 @@
   color: #2e1c76;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1080px) {
   .home {
     height: 7vh;
     min-height: 83px;

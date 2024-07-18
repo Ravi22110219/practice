@@ -8,36 +8,38 @@ const BlogPage = () => {
   <div className='py-4'></div>
   <div className="blogBanner">
         <div className="headingBanner">
-          <h1 >Shiksha Sambal Entrance Exam for Free Coaching at ALLEN Kota Concluded</h1>
+          <h1 style={{fontSize: "calc(18px + 1vw)",display:"flex",justifyContent:"center",alignContent:"center"}} >Shiksha Sambal Entrance Exam for Free Coaching at ALLEN Kota Concluded</h1>
           
         </div>
       </div>
 
-    <main className="container my-5">
+    <main className="container my-3 pl-[3.5%] pr-[3.5%]">
    
       
       <div className="row g-5">
         <div className="col-md-8">
-          <h3 className="pb-4 mb-4 fst-italic border-bottom">
+          <h3 className="pb-3  fst-italic border-bottom font-bold text-blue-950">
             From the InfiniteEduVerse
           </h3>
 
           <article className="blog-post">
-            <h2 className="display-5 link-body-emphasis mb-1">Sample blog post</h2>
-            <p className="blog-post-meta">July 20, 2024 by <a href="#">Ali Naushad</a></p>
-            <p>This blog post shows a few different types of content that’s supported and styled with Bootstrap. Basic typography, lists, tables, images, code, and more are all supported as expected.</p>
+          
+            <h2 className="display-5 link-body-emphasis p-3 mb-1">Sample blog post</h2>
+            <hr  className='mb-4'/>
+            <p className="blog-post-meta">July 20, 2024 by <a href="#" className='text-red-500 '>Ali Naushad</a></p>
+            <p className='text-lg font-medium pb-3'>This blog post shows a few different types of content that’s supported and styled with Bootstrap. Basic typography, lists, tables, images, code, and more are all supported as expected.</p>
             <hr  className='mb-4'/>
             <div className="blogImage">
-              <img src="https://myexam.allen.in/wp-content/uploads/2024/07/B.Tech-Program-in-Hindi-at-IIT-Jodhpur-From-New-Academic-Session.jpg" alt="" />
+              <img src="https://scontent.fjai11-1.fna.fbcdn.net/v/t39.30808-6/450233517_865085092308755_911762825849088789_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=Y4037o3dwZcQ7kNvgF7pgAB&_nc_ht=scontent.fjai11-1.fna&oh=00_AYBdemNKMF1QSnSewUBVOyx8C3UiUtm38IC80PWtir06Mw&oe=669D17D8"  className="pb-3"alt="" />
             </div>
             <p><span style={{color:"red", fontWeight:"bold"}}>This is some additional paragraph placeholder </span>content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects <span style={{color:"red", fontWeight:"bold"}}>This is some additional paragraph placeholder </span> the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
             
             <p>This is an example blockquote in action:This is some additional paragraph placeholder content. <span style={{color:"red", fontWeight:"bold"}}>This is some additional paragraph placeholder </span>It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of textThis is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text..</p>
            
            
-            <h3>Key Points</h3>
+            <h3 className='font-semibold text-2xl py-3'>Key Points:</h3>
             <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout. This is an example unordered list:</p>
-            <ul>
+            <ul className='list-disc text-lg font-medium text-red-800 pl-5'>
               <li>First list item</li>
               <li>Second list item with a longer description</li>
               <li>Third list item to close it out</li>
@@ -47,7 +49,7 @@ const BlogPage = () => {
             </ul>
            
               
-            <h2>Inline HTML elements</h2>
+            <h3 className='font-semibold text-2xl py-3'>Additional Information:</h3>
             <p>This is an example blockquote in action:This is some additional paragraph placeholder content. <span style={{color:"red", fontWeight:"bold"}}>This is some additional paragraph placeholder </span>It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of textThis is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text..</p>
          
           </article>
@@ -61,13 +63,13 @@ const BlogPage = () => {
         <div className="col-md-4">
           <div className="position-sticky" style={{top: '2rem'}}>
             <div className="p-4 mb-3 bg-body-tertiary rounded">
-              <h4 className="fst-italic">About</h4>
+              <h4 className="fst-italic text-red-500 text-xl font-bold">About</h4>
               <p className="mb-0">Customize this section to tell your visitors a little bit about your publication, writers, content, or something else entirely. Totally up to you.</p>
             </div>
 
             <div className="p-4">
-              <h4 className="fst-italic">Archives</h4>
-              <ol className="list-unstyled mb-0">
+              <h4 className="fst-italic text-red-500 text-xl font-bold">Monthly Blog</h4>
+              <ol className="list-unstyled mb-0 text-direction-flex text-blue-900">
                 <li><a href="#">March 2021</a></li>
                 <li><a href="#">February 2021</a></li>
                 <li><a href="#">January 2021</a></li>
@@ -84,8 +86,8 @@ const BlogPage = () => {
             </div>
 
             <div className="p-4">
-              <h4 className="fst-italic">Elsewhere</h4>
-              <ol className="list-unstyled">
+              <h4 className="fst-italic text-red-500 text-xl font-bold">Elsewhere</h4>
+              <ol className="list-unstyled text-blue-950">
                 <li><a href="#">GitHub</a></li>
                 <li><a href="#">Twitter</a></li>
                 <li><a href="#">Facebook</a></li>

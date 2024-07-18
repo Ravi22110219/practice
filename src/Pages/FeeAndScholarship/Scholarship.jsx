@@ -1,14 +1,11 @@
 import React from 'react';
 import styles from './Scholarship.module.css';
-import UpperNav from '../../Components/NavbarSection/UpperNav';
-import NavBar from '../../Components/NavbarSection/NavBar';
-import FooterSection from '../../Components/Footer/FooterSection';
+
 
 const Scholarship = () => {
     return ( 
         <>  
-            <UpperNav />
-            <NavBar />
+          
             <div className="w-full bg-gray-800 h-40 mt-20 flex items-center justify-center">
             <div className="w-5/6 mx-auto">
                 <h1 className="text-center text-white text-4xl">Scholarship</h1>
@@ -50,7 +47,7 @@ const Scholarship = () => {
                     </div>
                 </div>
             </div>
-            <FooterSection />
+          
         </> 
     );
 };

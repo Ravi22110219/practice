@@ -3,10 +3,10 @@ import styles from "./AppSection.module.css";
 
 import { FaGooglePlay, FaApple } from "react-icons/fa";
 
-import appleStoreIcon from "../../assets/photoes/apple store.png";
-import sliderImg1 from "../../assets/photoes/slider-img1.png";
-import sliderImg2 from "../../assets/photoes/slider-img2.png";
-import sliderImg3 from "../../assets/photoes/slider-img3.png";
+
+import sliderImg1 from "../../assets/photoes/AppImg-1.png";
+import sliderImg2 from "../../assets/photoes/AppImg-2.png";
+import sliderImg3 from "../../assets/photoes/AppImg-3.png";
 
 const AppSection = () => {
   const sliderRef = useRef(null);
@@ -35,7 +35,7 @@ const AppSection = () => {
           slider.style.transition = "none";
           slider.style.transform = `translateX(-${totalItems * 100}%)`;
           setActiveIndex(totalItems - 1);
-        }, 1000);
+        }, 3000);
       }
     };
 
@@ -60,8 +60,8 @@ const AppSection = () => {
       <div className={styles.appColms}>
         <div className={styles.appColmLeft}>
           <div className={styles.appCont}>
-            <h2 >
-              Admission Information through <span>Infinite EduVerse</span> App
+            <h2 style={{fontSize: "calc(18px + 1vw)", color:"rgb(250, 140, 0)"}}>
+              Admission Information through <span className="text-blue-950 font-bold">Infinite EduVerse</span> App
             </h2>
             <p>
               INFINITE EduVerse Info and admission app is here to provide all

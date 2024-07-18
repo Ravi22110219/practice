@@ -42,7 +42,7 @@
 .about {
   position: relative;
   width: 100%;
-  padding: 30px 4% 30px;
+  padding: 4% 30px ;
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-gap: 50px 4%;
@@ -91,6 +91,7 @@
   margin: 10px 0px;
   font-size: 15px;
   color: var(--text-clr);
+  cursor: pointer;
 }
 
 .aboutList li::before {
@@ -101,6 +102,11 @@
   left: 0px;
   top: -2px;
   color: var(--heading-clr);
+}
+
+.aboutList li:hover{
+  color: #e55b53;
+ font-size: 16px;
 }
 
 .aboutBtn {

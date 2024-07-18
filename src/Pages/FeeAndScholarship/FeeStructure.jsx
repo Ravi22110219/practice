@@ -52,7 +52,9 @@ const FeeStructure = () => {
                             </tbody>
                         </table>
                     </div>
-                    <p className={styles.registrationFee}><FaHandPointRight style={{marginRight:"10px", color:"black"}} />Registration fee - 3000</p>
+                    <div className='flex'>
+                    <FaHandPointRight style={{marginRight:"10px",marginTop:"5px", color:"black"}} />
+                    <p className={styles.registrationFee}>Registration fee - 3000</p></div>
                 </div>
                 <div className={styles.section}>
                     <h2>JEE DIVISION</h2>
@@ -92,8 +94,13 @@ const FeeStructure = () => {
                             </tbody>
                         </table>
                     </div>
-                    <p className={styles.registrationFee}><FaHandPointRight style={{marginRight:"10px", color:"black"}} />Registration fee - 3000</p>
-                    <p className={styles.testSeriesFee}><FaHandPointRight style={{marginRight:"10px", color:"black"}} />Test Series (Minor+ Major+ Random+ BioNCE+ RBTS) - 5000</p>
+                    <div className='flex'>
+                    <FaHandPointRight style={{marginRight:"10px",marginTop:"5px", color:"black"}} />
+                    <p className={styles.registrationFee}>Registration fee - 3000</p></div>
+                    <div className='flex'>
+                    <FaHandPointRight style={{marginRight:"10px",marginTop:"5px", color:"black"}} />
+                    <p className={styles.registrationFee}>Test Series (Minor+ Major+ Random+ BioNCE+ RBTS) - 5000</p></div>
+                  
                 </div>
             </div>
            

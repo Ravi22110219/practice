@@ -9,7 +9,7 @@ const UpperNav = () => {
         <section className="bg-gray-100  border-b border-gray-300" id="home">
             {/* Main Navbar Starts */}
             <div className="w-full h-[5vh] min-h-[40px] px-[4%] bg-black flex items-center justify-between">
-                <div className="w-1/2 ml-4">
+                <div className="w-1/2">
                     <ul className="flex items-center list-none p-0 m-0">
                         <li className="mr-2.5">
                             <NavLink 
@@ -35,7 +35,7 @@ const UpperNav = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="w-1/2 flex justify-end mr-4">
+                <div className="w-1/2 flex justify-end mr-0">
                     <button className="w-20 h-6 bg-red-600 text-white border border-gray-600 rounded-full cursor-pointer mr-2.5 hover:bg-red-500 flex items-center justify-center">
                         <MdComputer className="mr-1.25 mr-1" />
                         Apply

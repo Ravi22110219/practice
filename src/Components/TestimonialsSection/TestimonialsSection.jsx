@@ -1,8 +1,6 @@
 import React, { useEffect, useRef } from 'react';
+import { FaStar, FaArrowLeft, FaArrowRight, FaQuoteLeft } from "react-icons/fa";
 import styles from './TestimonialsSection.module.css';
-import { FaStar } from "react-icons/fa";
-
-
 const testimonialsData = [
   {
     image: 'https://ravi22110219.github.io/BidsukTechnoCreation/Ravi%20Kumawat.jpg',
@@ -54,46 +52,43 @@ const TestimonialsSection = () => {
   }, []);
 
   return (
-    <section className={styles.testimonials} id="testimonials">
-      {/* === Testimonials Section Header Starts === */}
-      <header className={styles.sectionHeader}>
+    <section className="w-full px-[4%] py-4" id="testimonials">
+    <header className={styles.sectionHeader}>
         <h3>Testimonials</h3>
         <h1>What Our Clients Say About Us</h1>
       </header>
-      {/* === Testimonials Contents Starts === */}
-      <div className={styles.carouselWrapper}>
-        <button className={styles.navButton} onClick={() => (carouselRef.current.scrollLeft -= carouselRef.current.offsetWidth)}>
-          <i className="fa-solid fa-arrow-left"></i>
+      <div className="relative">
+        <button className="absolute top-1/2 transform -translate-y-1/2 left-0 z-10 text-2xl bg-transparent border-none cursor-pointer" onClick={() => (carouselRef.current.scrollLeft -= carouselRef.current.offsetWidth)}>
+          <FaArrowLeft />
         </button>
-        <div className={styles.carousel} ref={carouselRef}>
+        <div className="flex overflow-x-auto scroll-smooth space-x-6 p-4" ref={carouselRef}>
           {testimonialsData.map((testimonial, index) => (
-            <div key={index} className={styles.testimonialsItem}>
-              <div className={styles.profile}>
-                <div className={styles.profileImage}>
-                  <img src={testimonial.image} alt={testimonial.name} />
+            <div key={index} className="flex-shrink-0 w-80 md:w-1/3 bg-gray-100 rounded-lg p-4">
+              <div className="flex items-center mb-4">
+                <div className="w-14 h-14 rounded-full overflow-hidden mr-4">
+                  <img src={testimonial.image} alt={testimonial.name} className="w-full h-full object-cover" />
                 </div>
-                <div className={styles.profileDesc}>
-                  <span>{testimonial.name}</span>
-                  <span>{testimonial.description}</span>
+                <div>
+                  <span className="block text-lg font-semibold">{testimonial.name}</span>
+                  <span className="block text-sm text-gray-600">{testimonial.description}</span>
                 </div>
               </div>
-              <p>{testimonial.text}</p>
-              <div className={styles.quote}>
-                <i className="fa fa-quote-left"></i>
+              <p className="text-sm text-gray-700 mb-4">{testimonial.text}</p>
+              <div className="text-center mb-2">
+                <FaQuoteLeft className="text-xl text-gray-500" />
               </div>
-              <div className={styles.ratings}>
-                {[...Array(testimonial.rating)].map((star, i) => (
-                  <i key={i} className="fa-solid fa-star"><FaStar /></i>
+              <div className="flex justify-center space-x-1">
+                {[...Array(testimonial.rating)].map((_, i) => (
+                  <FaStar key={i} className="text-yellow-500" />
                 ))}
               </div>
             </div>
           ))}
         </div>
-        <button className={styles.navButton} onClick={() => (carouselRef.current.scrollLeft += carouselRef.current.offsetWidth)}>
-          <i className="fa-solid fa-arrow-right"></i>
+        <button className="absolute top-1/2 transform -translate-y-1/2 right-0 z-10 text-2xl bg-transparent border-none cursor-pointer" onClick={() => (carouselRef.current.scrollLeft += carouselRef.current.offsetWidth)}>
+          <FaArrowRight />
         </button>
       </div>
-      {/* === Testimonials Contents Ends === */}
     </section>
   );
 };

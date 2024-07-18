@@ -29,6 +29,8 @@
 .footerCol3 .colTitle h4,
 .footerCol4 .colTitle h4 {
   color: rgb(255, 255, 255);
+  font-size: calc(18px + .5vw);
+  padding-bottom: 10px;
 }
 
 .footerCol .colTitle {
@@ -45,10 +47,7 @@
   border-top: 2px solid #ffffff; /* You can also use color: rgb(0, 0, 0); as border-color if necessary */
 }
 
-.footerCol .colTitle h3 {
-  font-size: (15px + .5vw);
-  font-weight: 600;
-}
+
 
 .footerCol .colContents {
   display: flex;
@@ -229,7 +228,8 @@
 .footerPart2Heading h3 {
   color: #cecece;
   font-weight: 600;
-  font-size: (15px + .5vw);
+  font-size: calc(15px + .5vw);
+  padding-bottom: 5px;
 }
 
 .footerPart2Col2 {

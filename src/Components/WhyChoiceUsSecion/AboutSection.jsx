@@ -1,5 +1,7 @@
 import React from 'react';
 import styles from './AboutSection.module.css'; 
+import { Link } from 'react-router-dom';
+
 
 const AboutSection = () => {
   return (
@@ -13,7 +15,7 @@ const AboutSection = () => {
       <div className={styles.aboutText}>
         {/* === Section Header Starts === */}
         <header className={styles.sectionHeader}>
-          <h3>About Us</h3>
+          <h3>Why Choice Us</h3>
           <h1>The best course in animation</h1>
         </header>
         {/* === Section Header Ends === */}
@@ -22,12 +24,16 @@ const AboutSection = () => {
           et dolore magna aliqua. Ut enim ad minim veniam.
         </p>
         <ul className={styles.aboutList}>
-          <li check="&#10004;">Lorem ipsum dolor sit amet</li>
-          <li check="&#10004;">consectetur adipisicing elit</li>
-          <li check="&#10004;">sed do eiusmod tempor incididunt</li>
-          <li check="&#10004;">ut labore et dolore magna aliqua</li>
+          <li check="&#10004;">Excellent Faculty Team
+          </li>
+          <li check="&#10004;">Regular Involvement of Founder Team in Academics.
+
+ </li>
+          <li check="&#10004;">Regular Test Series</li>
+          <li check="&#10004;">Students have a variety of
+          Awards & Scholarships available</li>
         </ul>
-        <button className={`${styles.btn} ${styles.aboutBtn}`}>Read More</button>
+        <button className={`${styles.btn} ${styles.aboutBtn}`}><Link to={"/whychoiceus"}>Read More</Link></button>
       </div>
       {/* === Right Side Ends === */}
     </section>

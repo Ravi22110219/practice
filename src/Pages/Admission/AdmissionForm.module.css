@@ -66,10 +66,13 @@
 }
 
 .formHeading{
-  text-align: center;
   margin-bottom: 20px;
-  font-size: larger;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  font-size: calc(18px + .5vw);
 }
+
 
 
 

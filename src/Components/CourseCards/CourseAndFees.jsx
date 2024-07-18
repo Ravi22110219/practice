@@ -40,7 +40,7 @@ const CourseAndFees = () => {
     return (
         <section className={styles.courses} id="courses">
             <header className={styles.sectionHeader}>
-                <h3>Courses & Fees</h3>
+                <h3>Courses & Batch</h3>
                 <h1>Online animation lessons at your pace</h1>
             </header>
             <div className={styles.coursesContents}>

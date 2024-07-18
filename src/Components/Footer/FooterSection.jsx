@@ -15,7 +15,7 @@ class FooterSection extends Component {
         <div className={styles.footerContents}>
           <div className={`${styles.footerCol} ${styles.footerCol1}`}>
             <div className={styles.colTitle}>
-              <h3>About Us</h3>
+              <h4>About Us</h4>
               
             </div>
             <hr className={styles.hrLine} />
@@ -101,7 +101,7 @@ class FooterSection extends Component {
                 <div className={styles.footerPart2Heading}>
                   <h3>Contact Us</h3>
                 </div>
-                <p>+91 72-4040-9797, +91 72-4040-9898<br /><span>(08:00 AM to 08:00 PM)</span></p>
+                <p>+91 72-4040-9797, +91 72-4040-9898<br /><span className='text-blue-600 hover:text-white'>(08:00 AM to 08:00 PM)</span></p>
               </div>
             </div>
             <div className={styles.footerPart2Col3}>
@@ -110,7 +110,7 @@ class FooterSection extends Component {
                 <div className={styles.footerPart2Heading}>
                   <h3>Send a Message</h3>
                 </div>
-                <p>infiniteeduverse@gmail.com</p>
+                <a className='text-gray-200'>infiniteacademysikar@gmail.com</a>
               </div>
             </div>
           </div>
