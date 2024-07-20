@@ -48,7 +48,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50vh;
   width: 100%;
   min-height: 400px;
 }
@@ -160,8 +159,11 @@
 
 .card h4 {
   margin-top: 15px;
-  color: #000000;
+  color: black;
   margin-left: 10px;
+  font-size: calc(12px + .3vw);
+  font-weight: 600;
+
 }
 
 .card p {

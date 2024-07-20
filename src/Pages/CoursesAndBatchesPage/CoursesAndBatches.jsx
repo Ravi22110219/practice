@@ -5,6 +5,7 @@ import { FaYoutube } from 'react-icons/fa';
 import Slider from '../../Components/SliderSection/Slider';
 
 const CoursesAndBatches = () => {
+    window.scroll(0, 0);
     const batches = [
         { courseName: 'Foundation', batchName: 'Aayushmaan', startDate: '1st june 2024' },
         { courseName: '12th Batch', batchName: 'Sanghrsh', startDate: '15th Feb 2024' },
@@ -47,7 +48,7 @@ const CoursesAndBatches = () => {
             </div>
             <header className={styles.sectionHeader}>
                 <h3>Chemistry</h3>
-                <h1>Online animation lessons at your pace</h1>
+                <h1>Best Chemistry Courses On Youtube</h1>
             </header>
             <div className={styles.sliderContainer}>
             
@@ -70,7 +71,7 @@ const CoursesAndBatches = () => {
 
             <header className={styles.sectionHeader}>
                 <h3>Physics</h3>
-                <h1>Online animation lessons at your pace</h1>
+                <h1>Learn Physic From Best Teachers</h1>
             </header>
             <div className={styles.sliderContainer}>
             
@@ -92,7 +93,7 @@ const CoursesAndBatches = () => {
             </div>
             <header className={styles.sectionHeader}>
                 <h3>Mathematics</h3>
-                <h1>Online animation lessons at your pace</h1>
+                <h1>Math With Best</h1>
             </header>
             <div className={styles.sliderContainer}>
             

@@ -15,14 +15,14 @@ const coursesData = [
         id: 2,
         title: "Pre-Medical/NEET UG",
         description: "NEET-UG Courses sharpen skills essential for medical entrance exams, ensuring students are well-prepared for success in the competitive medical field.",
-        link: "/course&batch",
+        link: "/course&batchneet",
         image: "https://www.allen.ac.in/assets/img/new-homepage/premedical.png"
     },
     {
         id: 3,
         title: "NEET UG",
         description: "NEET-UG Courses sharpen skills essential for medical entrance exams, ensuring students are well-prepared for success in the competitive medical field.",
-        link: "/course&batch",
+        link: "/course&batchneet",
         image: "https://www.allen.ac.in/assets/img/new-homepage/medpg.png"
         
     },

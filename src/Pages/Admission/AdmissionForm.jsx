@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
+import emailjs from "@emailjs/browser";
 import styles from './AdmissionForm.module.css';
 import { FaCheckCircle } from 'react-icons/fa';
 import { SiGoogleforms } from "react-icons/si";
 import { AiOutlineForm } from "react-icons/ai";
-
-
 
 const AdmissionForm = () => {
     const [formData, setFormData] = useState({
@@ -26,14 +25,32 @@ const AdmissionForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Form submitted:', formData);
-        setIsModalOpen(true);
-        setFormData({
-            name: '',
-            email: '',
-            phone: '',
-            course: '',
-            message: ''
+
+        const templateParams = {
+            first_name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            course: formData.course,
+            message: formData.message,
+        };
+
+        emailjs.send(
+            'service_gcqtbld', 
+            'template_16kukl2', 
+            templateParams, 
+            'em7z6sDqcxCGKB88W'
+        ).then((response) => {
+            console.log('SUCCESS!', response.status, response.text);
+            setIsModalOpen(true);
+            setFormData({
+                name: '',
+                email: '',
+                phone: '',
+                course: '',
+                message: ''
+            });
+        }).catch((error) => {
+            console.log('FAILED...', error);
         });
     };
 
@@ -43,12 +60,14 @@ const AdmissionForm = () => {
 
     return (
         <>
-           
-           <div className="w-full bg-gray-800 h-40 mt-20 flex items-center justify-center">
-            <div className="w-5/6 mx-auto">
-                <h1 className="text-center text-white text-4xl"><SiGoogleforms className="inline mr-2" />Online Admission Inquiry</h1>
+            <div className="w-full bg-gray-800 h-40 mt-20 flex items-center justify-center">
+                <div className="w-5/6 mx-auto">
+                    <h1 className="text-center text-white text-4xl">
+                        <SiGoogleforms className="inline mr-2" />
+                        Online Admission Inquiry
+                    </h1>
+                </div>
             </div>
-        </div>
             <div className={styles.container}>
                 <div className={styles.imageContainer}>
                     <img
@@ -60,15 +79,15 @@ const AdmissionForm = () => {
                 <div className={styles.formContainer}>
                     <div className={styles.formHeading}>
                         <AiOutlineForm className='pt-1'/>
-                    <h2 className='text-black'>Fill This Form</h2></div>
-                    
+                        <h2 className='text-black'>Fill This Form</h2>
+                    </div>
                     <form onSubmit={handleSubmit}>
                         <div className={styles.formGroup}>
                             <label htmlFor="name">Name:</label>
                             <input
                                 type="text"
                                 id="name"
-                                name="name"
+                                name="name"  // Update name attribute to match formData key
                                 value={formData.name}
                                 onChange={handleChange}
                                 required
@@ -113,7 +132,7 @@ const AdmissionForm = () => {
                                 <option value="JEE Main">JEE Main</option>
                                 <option value="JEE Advance">JEE Advanced</option>
                                 <option value="NEET/PMT">NEET/PMT</option>
-                                <option value="NEET/PMT">Test Series</option>
+                                <option value="Test Series">Test Series</option>
                                 <option value="Counselling">Counselling</option>
                             </select>
                         </div>
@@ -142,9 +161,6 @@ const AdmissionForm = () => {
                     </div>
                 )}
             </div>
-         
-
-           
         </>
     );
 };

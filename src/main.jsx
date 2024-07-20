@@ -15,6 +15,9 @@ import AdminBlogPage from './Pages/AdminPage/AdminBlogPage.jsx'
 import Scholarship from './Pages/FeeAndScholarship/Scholarship.jsx'
 import FeeRefundRules from './Pages/FeeAndScholarship/FeeRefundRules.jsx'
 import WhyChooseUs from './Pages/WhyChoiceUs/WhyChooseUs.jsx'
+import DirectorsAndteachers from './Pages/AboutUs/DirectorsAndteachers.jsx'
+import BlogHomePage from './Pages/Blog/BlogHomePage.jsx'
+import CoursesAndBatchesNEET from './Pages/CoursesAndBatchesPage/CoursesAndBatchesNEET.jsx'
 
 const router = createBrowserRouter([
     {
@@ -23,6 +26,7 @@ const router = createBrowserRouter([
         children: [
             { path: "", element: <Home /> },
             { path: "course&batch", element: <CoursesAndBatches /> },
+            { path: "course&batchneet", element: <CoursesAndBatchesNEET /> },
             { path: "admission", element: <AdmissionForm /> },
             {
                 path: "feeAndScholarship",
@@ -33,9 +37,10 @@ const router = createBrowserRouter([
                 ],
             },
             { path: "result", element: <ResultsHomePage /> },
-            { path: "blog", element: <BlogPage /> },
+            { path: "bloghomepage", element: <BlogHomePage />},
             { path: "gallery", element: <PhotoGallery /> },
             { path: "whychoiceus", element: <WhyChooseUs />},
+            { path: "directorsandteachers", element: <DirectorsAndteachers /> },
         ],
     },
 

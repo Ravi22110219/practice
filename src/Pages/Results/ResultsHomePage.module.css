@@ -1,24 +1,3 @@
-.blogBanner {
-  width: 100%;
-  background-color: rgb(38, 38, 38);
-  height: 120px;
-  margin-top: 80px;
-  margin-bottom: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.headingBanner {
-  width: 84%;
-  margin: auto;
-}
-
-.headingBanner h1 {
-  text-align: center;
-  color: #ffffff;
-}
-
 .resultsPage {
   width: 92%;
   margin: auto;
@@ -56,7 +35,7 @@
 }
 
 .categoryButton.active {
-  background-color: #4caf50;
+  background-color: rgb(255, 148, 25);
   color: white;
 }
 
@@ -64,7 +43,7 @@
   position: relative;
   margin: 20px 0;
   padding: 10px 0;
-  border-left: 3px solid #4caf50;
+  border-left: 3px solid rgb(255, 148, 25);
   animation: fadeIn 1s ease-in-out;
 }
 
@@ -86,7 +65,7 @@
   top: 20px;
   width: 16px;
   height: 16px;
-  background-color: #4caf50;
+  background-color: rgb(255, 148, 25);
   border: 2px solid #fff;
   border-radius: 50%;
   z-index: 1;
@@ -105,7 +84,7 @@
 }
 
 .viewMoreButton {
-  background-color: #4caf50;
+  background-color: rgb(255, 148, 25);
   color: white;
   padding: 10px 20px;
   border: none;
@@ -115,7 +94,7 @@
 }
 
 .viewMoreButton:hover {
-  background-color: #45a049;
+  background-color: rgb(11, 3, 0);
 }
 
 @keyframes fadeIn {
@@ -126,4 +105,40 @@
 @keyframes slideIn {
   from { transform: translateX(-100%); }
   to { transform: translateX(0); }
+}
+
+.studentDetails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.studentCard {
+  width: 220px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  background: #fff;
+}
+
+.studentImage {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.studentInfo h4 {
+  font-size: 18px;
+  color: #003366;
+  margin: 10px 0;
+}
+
+.studentInfo p {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
 }

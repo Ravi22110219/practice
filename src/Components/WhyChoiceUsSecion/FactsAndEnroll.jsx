@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import styles from './FactsAndEnroll.module.css'; // Import the CSS file
+import { Link } from 'react-router-dom';
 
 const FactsAndEnrollSections = () => {
   const factsSectionRef = useRef(null);
@@ -83,7 +84,8 @@ const FactsAndEnrollSections = () => {
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
               labore et dolore magna aliqua.</p>
           </div>
-          <button className={`${styles.btn} `}>Enroll Now</button>
+          <Link to={"/directorsandteachers"}>
+          <button className={`${styles.btn} `}>Enroll Now</button></Link>
         </div>
       </section>
     </>

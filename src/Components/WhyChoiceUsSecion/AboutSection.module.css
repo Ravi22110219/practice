@@ -138,7 +138,7 @@
 
 /*   === Button Styles ===   */
 .btn {
-  background-color: #ff6f61;
+  background-color: #000000;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -149,5 +149,5 @@
 }
 
 .btn:hover {
-  background-color: #e55b53;
+  background-color: #313131;
 }

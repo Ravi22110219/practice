@@ -14,6 +14,7 @@ const UpperNav = () => {
                         <li className="mr-2.5">
                             <NavLink 
                                 to="/" 
+                                
                                 className={(isActive) => `relative text-white font-medium text-sm uppercase no-underline tracking-wide flex items-center justify-center ${isActive ? 'text-orange-700' : 'text-gray-700'}`}
                             >
                                 <AiFillHome className="mr-2" />

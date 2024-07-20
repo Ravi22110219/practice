@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import styles from './BlogSection.module.css'; // Import the CSS module
 
 const BlogSection = () => {
+  
+
   useEffect(() => {
     const wrapper = document.querySelector(`.${styles.wrapper}`);
     const carousel = document.querySelector(`.${styles.carousel}`);
@@ -124,6 +126,7 @@ const BlogSection = () => {
               </div>
               <h4>JEE Main 2024 – Results of Many Students Withheld</h4>
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum animi, quasi veritatis cum culp....</p>
+              <div className='flex py-2'><button>Read </button><p>{Date.now(toString)}</p></div>
             </li>
             {/* Add more cards as needed */}
           </ul>
