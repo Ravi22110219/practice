@@ -18,7 +18,7 @@ const features = [
   {
     title: "Excellent Faculty",
     description: "Expert faculty with years of experience. Outstanding and highly qualified faculty members who help students in every aspect of their study life.",
-    image: Excellent_Faculty
+    image: Excellent_Faculty,
   },
   {
     title: "Doubt Classes",
@@ -42,22 +42,22 @@ const features = [
   },
   {
     title: "Board Exam Preparation",
-    description: "(For 12th Board Students) On the basis of NCERT and State Boards, worksheets for stodents are created. This run parallel with the course curriculum of NEET/JEE",
+    description: "(For 12th Board Students) On the basis of NCERT and State Boards, worksheets for students are created. This runs parallel with the course curriculum of NEET/JEE.",
     image: Board_Exam_img,
   },
   {
     title: "True Teachers",
-    description: "Regular Involvement of Founder Team in Academics",
+    description: "Regular Involvement of Founder Team in Academics.",
     image: True_Teachers_img,
   },
   {
     title: "Providing 24*7 Safety",
-    description: "You can trust our eyes. Invisible protector of students",
+    description: "You can trust our eyes. Invisible protector of students.",
     image: Safety_img,
   },
   {
     title: "Help Desk",
-    description: "Culture of helping students regarding their day to day problems and Helping staff are very capable to make better understanding.",
+    description: "Culture of helping students regarding their day-to-day problems and helping staff are very capable to make better understanding.",
     image: Help_Desk_img,
   },
   {
@@ -67,26 +67,24 @@ const features = [
   },
   {
     title: "Reward System",
-    description: "Students have a variety of Awards & Scholarships available basis on their regular class test performance.",
+    description: "Students have a variety of Awards & Scholarships available based on their regular class test performance.",
     image: Reward_img,
   },
   {
     title: "Classroom",
     description: "Spacious Classrooms with comfortable proper sitting arrangement for long duration classes.",
     image: Classroom_img,
-  }
+  },
 ];
-
-
 
 const WhyChooseUs = () => {
   const featureRefs = useRef([]);
   window.scrollTo(0, 0);
-  
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries, observer) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add(styles.visible);
             observer.unobserve(entry.target);
@@ -94,18 +92,18 @@ const WhyChooseUs = () => {
         });
       },
       {
-        threshold: 0.1
+        threshold: 0.1,
       }
     );
 
-    featureRefs.current.forEach(ref => {
+    featureRefs.current.forEach((ref) => {
       if (ref) {
         observer.observe(ref);
       }
     });
 
     return () => {
-      featureRefs.current.forEach(ref => {
+      featureRefs.current.forEach((ref) => {
         if (ref) {
           observer.unobserve(ref);
         }
@@ -113,50 +111,62 @@ const WhyChooseUs = () => {
     };
   }, []);
 
-  return (<>
-    <section className={styles.whyUsSection}>
-      <div className={styles.mainContHeading}>
-        <div className={styles.mainContHeadText}>
-          <h1 className={styles.heading}>Why Choose Us?</h1>
-        </div>
-      </div>
-      <div id="about" className={styles.about}>
-        {features.map((feature, index) => (
-          <div
-            key={index}
-            className={`${styles.row} ${index % 2 === 0 ? styles.rowEven : styles.rowOdd}`}
-            ref={el => (featureRefs.current[index] = el)}
-          >
-            <div className={styles.col1}>
-              <img src={feature.image} alt={feature.title} />
-            </div>
-            <div className={styles.col2}>
-              <h1 className={styles.title}>{feature.title}</h1>
-              <p>{feature.description}</p>
-            </div>
+  return (
+    <>
+      <section className={styles.whyUsSection}>
+        <div className={styles.mainContHeading}>
+          <div className={styles.mainContHeadText}>
+            <h1 className={styles.heading}>Why Choose Us?</h1>
           </div>
-        ))}
-      </div>
-    </section>
-        <div className={styles.whyWeInfoCont}>
+        </div>
+        <div id="about" className={styles.about}>
+          {features.map((feature, index) => (
+            <div
+              key={index}
+              className={`${styles.row} ${
+                index % 2 === 0 ? styles.rowEven : styles.rowOdd
+              }`}
+              ref={(el) => (featureRefs.current[index] = el)}
+            >
+              <div className={styles.col1}>
+                <img src={feature.image} alt={feature.title} />
+              </div>
+              <div className={styles.col2}>
+                <h1 className={styles.title}>{feature.title}</h1>
+                <p>{feature.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+     
+      <div className={styles.whyWeInfoCont}>
         <div className={styles.whyWeInfoContRow}>
           <div className={styles.whyWeInfoContCol1}>
             <h2>Daily Practice Problems</h2>
-            <p>Daily Practice Problems (DPPs) which contain questions segregated chapter wise and topic-wise. The questions have been carefully picked and set by authors understanding the need of NEET/ JEE aspirants as per their daily preparation schedule.</p>
+            <p>
+              Daily Practice Problems (DPPs) which contain questions segregated
+              chapter-wise and topic-wise. The questions have been carefully picked
+              and set by authors understanding the need of NEET/ JEE aspirants as per
+              their daily preparation schedule.
+            </p>
           </div>
           <div className={styles.whyWeInfoContCol2}>
             <h2>Performance Tracker</h2>
-            <p>Every student's progress is tracked by giving a constant feedback on their performance in the tests.</p>
+            <p>
+              Every student's progress is tracked by giving constant feedback on
+              their performance in the tests.
+            </p>
           </div>
           <div className={styles.whyWeInfoContCol3}>
             <h2>Feedback System</h2>
-            <p>Regular feedbacks are taken by the students in order to improve the learning process qualitatively and listen to all student's queries.</p>
+            <p>
+              Regular feedback is taken by the students in order to improve the
+              learning process qualitatively and listen to all student's queries.
+            </p>
           </div>
         </div>
-      </div>
-
-     
-      </>
+      </div> </section>
+    </>
   );
 };
 
