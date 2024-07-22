@@ -42,8 +42,9 @@
 
 .courses {
   width: 100%;
-  padding: 40px 4% 40px;
-  margin-bottom: 40px;
+  padding: 20px 4% 20px;
+  max-width: auto;
+  margin-bottom: 20px;
 }
 
 
@@ -133,7 +134,8 @@
 
 @media(max-width: 560px) {
   .courseBox {
-      flex-basis: calc(calc(100% / 1) - 2%);
+      flex-basis: calc(calc(100% / 1));
+      margin-left: 2%;
   }
 }
 /*   === Courses Section Ends ===   */

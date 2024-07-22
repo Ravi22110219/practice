@@ -1,0 +1,59 @@
+.aboutCoaching {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(255, 242, 213);
+  padding: 20px;
+  margin-top: 85px;
+}
+
+.imageContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.coachingImg {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+.content {
+  width: 92%;
+  margin: auto;
+  text-align: left;
+  background-color: rgb(255, 187, 39);
+  padding: 20px;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content h1 {
+  font-size: calc(18px + 1vw);
+  font-weight: 700;
+  color: #0b1c39;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: calc(15px + 0.3vw);
+  color: #333;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .content {
+      padding: 15px;
+  }
+
+  .content h1 {
+      font-size: calc(16px + 1vw);
+  }
+
+  p {
+      font-size: calc(14px + 0.3vw);
+  }
+}

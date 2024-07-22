@@ -1,0 +1,105 @@
+.motivationSection {
+  width: 100%;
+}
+
+.mainContHeading {
+  margin-top: 85px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px 4%;
+  align-items: center;
+  background: #181717;
+  color: #fff;
+}
+
+.motivationHeading {
+  font-size: calc(18px + 1vw);
+}
+
+.about {
+  width: 100%;
+  background-color: rgb(255, 242, 213);
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+.row {
+  display: flex;
+  margin-top: 1px;
+  flex-wrap: wrap;
+  gap: 2%;
+  padding: 20px 0px;
+  background-color: rgb(255, 242, 213);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.rowEven {
+  flex-direction: row;
+}
+
+.rowOdd {
+  flex-direction: row-reverse;
+}
+
+.col1 {
+  width: 40%;
+}
+
+.col1 img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.col2 {
+  width: 58%;
+  border-radius: 10px;
+  background-color: rgb(255, 187, 39);
+  padding: 30px;
+  transform: translateX(-50px);
+  transition: transform 0.6s ease-out;
+}
+
+.rowEven .col2 {
+  transform: translateX(-50px);
+}
+
+.rowOdd .col2 {
+  transform: translateX(50px);
+}
+
+.visible .col2 {
+  transform: translateX(0);
+}
+
+.title {
+  font-size: calc(18px + 1vw);
+  font-weight: 700;
+  color: #0b1c39;
+}
+
+.col2 p {
+  font-size: calc(15px + 0.3vw);
+}
+
+@media (max-width: 1000px) {
+  .row {
+    display: inline-block;
+  }
+
+  .col1 {
+    width: 100%;
+  }
+
+  .col2 {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
