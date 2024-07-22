@@ -7,11 +7,13 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: 'serif';
-  overflow-x:hidden ;
+ 
+
 }
 
 body{
   min-width: 400px;
   margin: auto;
   max-width: 2500px;
+  overflow-x: auto;
 }
