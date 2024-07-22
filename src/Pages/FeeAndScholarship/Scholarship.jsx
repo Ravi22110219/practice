@@ -3,6 +3,7 @@ import styles from './Scholarship.module.css';
 
 
 const Scholarship = () => {
+    window.scrollTo(0, 0);
     return ( 
         <>  
           

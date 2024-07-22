@@ -35,6 +35,7 @@ const photos = [
 ];
 
 const PhotoGallery = () => {
+    window.scrollTo(0, 0);
     const [modalImageIndex, setModalImageIndex] = useState(null);
     const [gridSize, setGridSize] = useState(3);
     const [likedImages, setLikedImages] = useState(new Array(photos.length).fill(false));

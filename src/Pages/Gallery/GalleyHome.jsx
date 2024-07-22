@@ -11,6 +11,7 @@ import { IoLocation } from "react-icons/io5";
 
 
 const GalleryHome = () => {
+    window.scrollTo(0, 0);
     const cards = [
         {
             title: "Short title, long jacket",

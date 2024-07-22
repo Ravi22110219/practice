@@ -3,6 +3,7 @@ import styles from './BlogHomePage.module.css';
 import { FaCalendar, FaUser } from 'react-icons/fa';
 
 const BlogHomePage = () => {
+    window.scrollTo(0, 0);
     const [currentItem, setCurrentItem] = useState(4);
     const [searchQuery, setSearchQuery] = useState('');
 

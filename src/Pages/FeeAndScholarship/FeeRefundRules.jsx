@@ -1,6 +1,7 @@
 import React from 'react';
 
 const FeeRefundRules = () => {
+  window.scrollTo(0, 0);
   return (
     <>
       <div className="w-full bg-gray-800 h-40 mt-20 flex items-center justify-center">

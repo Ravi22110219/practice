@@ -6,6 +6,7 @@ import { SiGoogleforms } from "react-icons/si";
 import { AiOutlineForm } from "react-icons/ai";
 
 const AdmissionForm = () => {
+    window.scrollTo(0, 0);
     const [formData, setFormData] = useState({
         name: '',
         email: '',

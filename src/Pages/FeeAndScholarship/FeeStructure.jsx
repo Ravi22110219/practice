@@ -5,6 +5,7 @@ import { FaHandPointRight } from "react-icons/fa";
 
 
 const FeeStructure = () => {
+    window.scrollTo(0, 0);
     return ( 
         <>  
            

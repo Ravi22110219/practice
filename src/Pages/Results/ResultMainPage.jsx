@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom'; // Import useLocati
 import styles from './ResultMainPage.module.css';
 
 const ResultMainPage = () => {
+    window.scrollTo(0, 0);
     const location = useLocation();
     const navigate = useNavigate();
     const selectedResult = location.state?.selectedResult; // Get selectedResult from location state

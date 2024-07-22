@@ -4,6 +4,7 @@ import React from 'react';
 
 import './BlogPage.css'
 const BlogPage = () => {
+  window.scrollTo(0, 0);
   return (<>
   <div className='py-4'></div>
   <div className="blogBanner">

@@ -2,6 +2,10 @@ import React, { useState, useEffect } from "react";
 import styles from "./NavBar.module.css";
 import logo from "../../assets/photoes/logo.png";
 import { AiOutlineMenuFold, AiOutlineMenuUnfold } from "react-icons/ai";
+
+import { AiFillHome } from "react-icons/ai";
+import { BiLogIn } from "react-icons/bi";
+import { MdComputer } from "react-icons/md";
 import { Link, NavLink } from "react-router-dom";
 
 const NavBar = () => {
@@ -9,9 +13,15 @@ const NavBar = () => {
     const [homeActive, setHomeActive] = useState(false);
     const [showFeeDropdown, setShowFeeDropdown] = useState(false);
     const [showCourseAndBatchDropdown, setShowCourseAndBatchDropdown] = useState(false);
+    const [showAboutUsDropdown, setShowAboutUsDropdown] = useState(false);
 
     const handleMenuToggle = () => {
         setMenuActive(!menuActive);
+        if (!menuActive && window.innerWidth < 1080) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "auto";
+        }
     };
 
     const handleMenuItemClick = () => {
@@ -33,7 +43,50 @@ const NavBar = () => {
         };
     }, []);
 
-    return (
+    return (<>
+      <section className="bg-gray-100  border-b border-gray-300" id="home">
+            {/* Main Navbar Starts */}
+            <div className="w-full h-[5vh] min-h-[40px] px-[4%] bg-black flex items-center justify-between">
+                <div className="w-1/2">
+                    <ul className="flex items-center list-none p-0 m-0">
+                        <li className="mr-2.5">
+                            <NavLink 
+                                to="/" 
+                                onClick={handleMenuItemClick}
+                                className={(isActive) => `relative text-white font-medium text-sm uppercase no-underline tracking-wide flex items-center justify-center ${isActive ? 'text-orange-700' : 'text-gray-700'}`}
+                            >
+                                <AiFillHome className="mr-2" />
+                                Home
+                                <span className="absolute content-[''] w-full h-0.5 bg-light-heading-clr left-0 top-[calc(100%+2px)] transition-transform transform scale-x-0 hover:scale-x-100"></span>
+                            </NavLink>
+                        </li>
+                        <li className="mx-2.5">
+                        <NavLink 
+                                to="https://maps.app.goo.gl/M6oCtoCrL3U8q9aK6" 
+                                onClick={handleMenuItemClick && handleMenuToggle}
+                                target="main" 
+                                className={(isActive) => `relative text-white font-medium text-sm uppercase no-underline tracking-wide flex items-center justify-center ${isActive ? 'text-orange-700' : 'text-gray-700'}`}
+                            >
+                                <AiFillHome className="mr-2" />
+                                Center
+                                <span className="absolute content-[''] w-full h-0.5 bg-light-heading-clr left-0 top-[calc(100%+2px)] transition-transform transform scale-x-0 hover:scale-x-100"></span>
+                            </NavLink>
+                          
+                        </li>
+                    </ul>
+                </div>
+                <div className="w-1/2 flex justify-end mr-0">
+                    <button className="w-20 h-6 bg-red-600 text-white border border-gray-600 rounded-full cursor-pointer mr-2.5 hover:bg-red-500 flex items-center justify-center">
+                        <MdComputer className="mr-1.25 mr-1" />
+                        Apply
+                    </button>
+                    <button className="w-20 h-6 bg-blue-600 text-white rounded-full cursor-pointer border border-gray-600 hover:bg-blue-400 flex items-center justify-center">
+                        <BiLogIn className="mr-1.25 mr-1" />
+                        Log In
+                    </button>
+                </div>
+            </div>
+        </section>
         <div className={`${styles.home} ${homeActive ? styles.active : ""}`}>
             <nav className={styles.mainNavbar}>
                 <div className={styles.navLogo}>
@@ -50,18 +103,18 @@ const NavBar = () => {
             >
                 <NavLink
                     to="/course&batch"
-                    onClick={handleMenuItemClick}
+                  
                     className={({ isActive }) =>
                         `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-600" : "text-gray-950"} border-b font-medium text-lg border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-600 lg:p-0`
                     }
                 >
-                    Courses & Batch
+                 Courses & Batch
                 </NavLink>
                 {showCourseAndBatchDropdown && (
                     <div className={styles.dropdown}>
                         <NavLink
                             to="/course&batch"
-                            onClick={handleMenuItemClick}
+                            onClick={handleMenuItemClick && handleMenuToggle}
                             className={({ isActive }) =>
                                 `block py-2 p-1 pr-4 pl-3 duration-200 ${isActive ? "text-gray-950" : "text-gray-950"} border-b text-gray-950 font-medium text-lg border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-600 lg:p-0`
                             }
@@ -70,7 +123,7 @@ const NavBar = () => {
                         </NavLink>
                         <NavLink
                             to="/course&batch"
-                            onClick={handleMenuItemClick}
+                            onClick={handleMenuItemClick && handleMenuToggle}
                             className={({ isActive }) =>
                                 `block py-2 p-1 pr-4 pl-3 duration-200 ${isActive ? "text-gray-950" : "text-gray-950"} border-b font-medium text-lg border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-600 lg:p-0`
                             }
@@ -79,7 +132,7 @@ const NavBar = () => {
                         </NavLink>
                         <NavLink
                             to="/course&batchneet"
-                            onClick={handleMenuItemClick}
+                            onClick={handleMenuItemClick && handleMenuToggle}
                             className={({ isActive }) =>
                                 `block py-2 p-1 pr-4 pl-3 duration-200 ${isActive ? "text-gray-950" : "text-gray-950"} border-b font-medium text-lg border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-600 lg:p-0`
                             }
@@ -92,7 +145,7 @@ const NavBar = () => {
             <li>
                 <NavLink
                     to="/admission"
-                    onClick={handleMenuItemClick}
+                    onClick={handleMenuItemClick && handleMenuToggle}
                     className={({ isActive }) =>
                         `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-600" : "text-gray-950"} border-b font-medium text-lg border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-600 lg:p-0`
                     }
@@ -106,7 +159,7 @@ const NavBar = () => {
             >
                 <NavLink
                     to={"/feeAndScholarship/feeStructure"}
-                    onClick={handleMenuItemClick}
+                 
                     className={({ isActive }) =>
                         `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-600" : "text-gray-950"} border-b font-medium text-lg border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-600 lg:p-0`
                     }
@@ -117,7 +170,7 @@ const NavBar = () => {
                     <div className={styles.dropdown}>
                         <NavLink
                             to="/feeAndScholarship/feeStructure"
-                            onClick={handleMenuItemClick}
+                            onClick={handleMenuItemClick && handleMenuToggle}
                             className={({ isActive }) =>
                                 `block py-2 p-1 pr-4 pl-3 duration-200 ${isActive ? "text-gray-950" : "text-gray-950"} border-b text-gray-950 font-medium text-lg border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-600 lg:p-0`
                             }
@@ -126,7 +179,7 @@ const NavBar = () => {
                         </NavLink>
                         <NavLink
                             to="/feeAndScholarship/scholarship"
-                            onClick={handleMenuItemClick}
+                            onClick={handleMenuItemClick && handleMenuToggle}
                             className={({ isActive }) =>
                                 `block py-2 p-1 pr-4 pl-3 duration-200 ${isActive ? "text-gray-950" : "text-gray-950"} border-b text-gray-950 font-medium text-lg border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-600 lg:p-0`
                             }
@@ -135,7 +188,7 @@ const NavBar = () => {
                         </NavLink>
                         <NavLink
                             to="/feeAndScholarship/feeRefundRules"
-                            onClick={handleMenuItemClick}
+                            onClick={handleMenuItemClick && handleMenuToggle}
                             className={({ isActive }) =>
                                 `block py-2 p-1 pr-4 pl-3 duration-200 ${isActive ? "text-gray-950" : "text-gray-950"} border-b text-gray-950 font-medium text-lg border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-600 lg:p-0`
                             }
@@ -148,7 +201,7 @@ const NavBar = () => {
             <li>
                 <NavLink
                     to="/gallery"
-                    onClick={handleMenuItemClick}
+                    onClick={handleMenuItemClick && handleMenuToggle}
                     className={({ isActive }) =>
                         `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-600" : "text-gray-950"} border-b font-medium text-lg border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-600 lg:p-0`
                     }
@@ -156,10 +209,58 @@ const NavBar = () => {
                     Gallery
                 </NavLink>
             </li>
+
+            <li  onMouseEnter={() => setShowAboutUsDropdown(true)}
+                 onClick={() => setShowAboutUsDropdown(true)}
+                onMouseLeave={() => setShowAboutUsDropdown(false)}>
+                <NavLink
+                    to="/"
+                    onClick={handleMenuItemClick && handleMenuToggle}
+                    className={({ isActive }) =>
+                        `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-600" : "text-gray-950"} border-b font-medium text-lg border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-600 lg:p-0`
+                    }
+                >
+                    About Us
+                </NavLink>
+              
+                {showAboutUsDropdown && (
+                    <div className={styles.dropdown}>
+                        <NavLink
+                            to="/infiniteEduVerse"
+                            onClick={handleMenuItemClick && handleMenuToggle}
+                            className={({ isActive }) =>
+                                `block py-2 p-1 pr-4 pl-3 duration-200 ${isActive ? "text-gray-950" : "text-gray-950"} border-b text-gray-950 font-medium text-lg border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-600 lg:p-0`
+                            }
+                        >
+                            Infinite EduVerse
+                        </NavLink>
+                        <NavLink
+                            to="/directorsandteachers"
+                            onClick={handleMenuItemClick && handleMenuToggle}
+                            className={({ isActive }) =>
+                                `block py-2 p-1 pr-4 pl-3 duration-200 ${isActive ? "text-gray-950" : "text-gray-950"} border-b font-medium text-lg border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-600 lg:p-0`
+                            }
+                        >
+                            Director's
+                        </NavLink>
+                        <NavLink
+                            to="/ourMotivation"
+                            onClick={handleMenuItemClick && handleMenuToggle}
+                            className={({ isActive }) =>
+                                `block py-2 p-1 pr-4 pl-3 duration-200 ${isActive ? "text-gray-950" : "text-gray-950"} border-b font-medium text-lg border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-600 lg:p-0`
+                            }
+                        >
+                            Our Motivation
+                        </NavLink>
+                        </div>
+                )}
+            </li>
+      
+
             <li>
                 <NavLink
                     to="/result"
-                    onClick={handleMenuItemClick}
+                    onClick={handleMenuItemClick && handleMenuToggle}
                     className={({ isActive }) =>
                         `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-600" : "text-gray-950"} border-b font-medium text-lg border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-600 lg:p-0`
                     }
@@ -169,8 +270,8 @@ const NavBar = () => {
             </li>
             <li>
                 <NavLink
-                    to="/bloghomepage"
-                    onClick={handleMenuItemClick}
+                    to="/blog"
+                    onClick={handleMenuItemClick && handleMenuToggle}
                     className={({ isActive }) =>
                         `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-600" : "text-gray-950"} border-b font-medium text-lg border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-600 lg:p-0`
                     }
@@ -178,19 +279,8 @@ const NavBar = () => {
                     Blogs
                 </NavLink>
             </li>
-            <li>
-                <NavLink
-                    to="/whychoiceus"
-                    onClick={handleMenuItemClick}
-                    className={({ isActive }) =>
-                        `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-600" : "text-gray-950"} border-b font-medium text-lg border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-600 lg:p-0`
-                    }
-                >
-                    Blog Admin
-                </NavLink>
-            </li>
-        </ul>
-                <div className={styles.menuBtn} onClick={handleMenuToggle}>
+           </ul>
+                <div className={styles.menuBtn} onClick={handleMenuItemClick && handleMenuToggle}>
                     {menuActive ? (
                         <AiOutlineMenuUnfold style={{ height: "50px", width: "100px"}} />
                     ) : (
@@ -198,7 +288,7 @@ const NavBar = () => {
                     )}
                 </div>
             </nav>
-        </div>
+        </div></>
     );
 };
 

@@ -18,6 +18,8 @@ import WhyChooseUs from './Pages/WhyChoiceUs/WhyChooseUs.jsx'
 import DirectorsAndteachers from './Pages/AboutUs/DirectorsAndteachers.jsx'
 import BlogHomePage from './Pages/Blog/BlogHomePage.jsx'
 import CoursesAndBatchesNEET from './Pages/CoursesAndBatchesPage/CoursesAndBatchesNEET.jsx'
+import AboutCoaching from './Pages/AboutUs/AboutCoaching.jsx'
+import OurMotivation from './Pages/AboutUs/OurMotivation.jsx'
 
 const router = createBrowserRouter([
     {
@@ -36,8 +38,17 @@ const router = createBrowserRouter([
                     { path: "feeRefundRules", element: <FeeRefundRules /> }, // Correct component
                 ],
             },
+
             { path: "result", element: <ResultsHomePage /> },
-            { path: "bloghomepage", element: <BlogHomePage />},
+            {
+                path: "aboutUs",
+                children: [
+                    { path: "infiniteEduVerse", element: <AboutCoaching /> },
+                    { path: "directorsandteachers", element: <DirectorsAndteachers />  },
+                    { path: "ourMotivation", element: <OurMotivation /> }, 
+                ],
+            },
+            { path: "blog", element: <BlogPage />},
             { path: "gallery", element: <PhotoGallery /> },
             { path: "whychoiceus", element: <WhyChooseUs />},
             { path: "directorsandteachers", element: <DirectorsAndteachers /> },
