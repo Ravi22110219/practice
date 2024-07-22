@@ -15,7 +15,7 @@ const AboutSection = () => {
       <div className={styles.aboutText}>
         {/* === Section Header Starts === */}
         <header className={styles.sectionHeader}>
-          <h3>Why Choice Us</h3>
+          <h3>Why Choose Us</h3>
           <h1>The best course in animation</h1>
         </header>
         {/* === Section Header Ends === */}
