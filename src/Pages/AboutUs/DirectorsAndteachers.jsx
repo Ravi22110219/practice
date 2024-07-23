@@ -8,7 +8,7 @@ import Sushil_Sir from '../../assets/photoes/raj_Sir.png';
 
 
 const DirectorsAndteachers = () => {
-  window.scrollTo(0, 0);
+  // window.scrollTo(0, 0);
 
   const [expandedIndex, setExpandedIndex] = useState(null);
   const teacherRefs = useRef([]);
@@ -18,7 +18,7 @@ const DirectorsAndteachers = () => {
   };
 
   useEffect(() => {
-    window.scroll(0,0);
+    window.scrollTo(0, 0);
     const observer = new IntersectionObserver(
       (entries, observer) => {
         entries.forEach(entry => {

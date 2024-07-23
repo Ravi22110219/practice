@@ -33,7 +33,7 @@
   align-items: center;
   opacity: 0;
   transform: translateY(50px);
-  transition: all 0.6s ease-out;
+  transition: all 0.8s ease-out;
 }
 
 
@@ -66,8 +66,23 @@
   background-color: rgb(255, 187, 39);
   padding: 30px;
   transform: translateX(-50px);
-  transition: transform 0.6s ease-out;
+  transition: transform 0.8s ease-out;
 }
+
+.row:hover {
+  .col2{
+   background-color: #0b1c39;
+}
+.title {
+ 
+  color: #ffffff;
+}
+.col2 p {
+  
+  color: #ffffff;
+}
+}
+
 
 .rowEven .col2 {
   transform: translateX(-50px);

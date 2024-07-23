@@ -1,6 +1,13 @@
 /* ResultsMainPage.module.css */
-
+.resultSection{
+  width: 100%;
+  margin-top: 83px;
+  background-color: #f9f9f9;
+}
 .resultsMainPage {
+  margin-top: 85px;
+  width: 92%;
+  margin: auto;
   padding: 20px;
   font-family: Arial, sans-serif;
   background-color: #f9f9f9;

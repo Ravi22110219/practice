@@ -48,7 +48,7 @@ const NavBar = () => {
         <div className={`${styles.home} ${homeActive ? styles.active : ""}`}>
             <nav className={styles.mainNavbar}>
                 <div className={styles.navLogo}>
-                    <img src={logo} alt="Infinite Eduverse Logo" className={styles.logo} />
+                  <a href="/"> <img src={logo} alt="Infinite Eduverse Logo" className={styles.logo} /></a> 
                     <div className={styles.navText}>
                         <h1>Infinite EduVerse</h1>
                         <h3>Sikar, Rajasthan</h3>

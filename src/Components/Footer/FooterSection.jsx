@@ -26,7 +26,7 @@ class FooterSection extends Component {
                 <li><NavLink to={"/aboutUs/infiniteEduVerse"}>About Infinite EduVerse</NavLink></li>
                 <li><NavLink to={"/aboutUs/directorsAndTeachers"}>Director's Message</NavLink></li>
                 <li><NavLink to={"./aboutUs/ourMotivation"}>Our Motivation</NavLink></li>
-                <li><a href="#">About System</a></li>
+                
               </ul>
             </div>
           </div>
@@ -63,10 +63,10 @@ class FooterSection extends Component {
             <hr className={styles.hrLine} />
             <div className={styles.colContents}>
               <ul>
-                <li><a href="#">About Infinite EduVerse</a></li>
-                <li><a href="#">Director's Message</a></li>
-                <li><a href="#">Our Motivation</a></li>
-                <li><a href="#">About System</a></li>
+                <li><NavLink to={"https://exams.nta.ac.in/NEET/images/public-notice-for-neet-ug-2024-as-on9-feb-2024.pdf"} target='main'>NEET-UG 2024 Notice</NavLink></li>
+                <li><NavLink to={"https://jeeadv.ac.in/"}>JEE Advanced 2024</NavLink></li>
+                <li><NavLink to={"https://jeemain.nta.ac.in/images/public-notice-for-online-application-form-of-jee-main-2024-dated-01-november-2023.pdf"}>JEE Main 2024 Notice</NavLink></li>
+             
               </ul>
             </div>
           </div>

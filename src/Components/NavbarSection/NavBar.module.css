@@ -42,12 +42,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+ 
 }
 
 .navLogo img {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
+  cursor: pointer;
+
 }
 
 .navText {
@@ -123,7 +126,7 @@
   padding: 10px;
   top: 100%;
   left: 0;
-  /* width: 200px; */
+  width: 200px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-top-color: orange;
   z-index: 200;

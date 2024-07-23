@@ -1,20 +1,22 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Updated import
+import { useNavigate } from 'react-router-dom';
 import styles from './ResultsHomePage.module.css';
 import Slider from '../../Components/SliderSection/Slider';
 
 const ResultsHomePage = () => {
     window.scrollTo(0, 0);
     const [selectedCategory, setSelectedCategory] = useState('JEE (Advanced)');
-    const [selectedYear, setSelectedYear] = useState(null);
-    const navigate = useNavigate(); // Updated
+    const navigate = useNavigate();
 
     const resultsData = {
         'JEE (Advanced)': [
             {
                 year: 2024,
                 qualified: "9045 (From CCP: 6723, DLP: 2322)",
-                topRanks: "45 in Top 100 | 80 in Top 200 | 195 in Top 500"
+                topRanks: "45 in Top 100 | 80 in Top 200 | 195 in Top 500",
+                students: [
+                    // Add students details if available for 2024
+                ]
             },
             {
                 year: 2023,
@@ -57,12 +59,18 @@ const ResultsHomePage = () => {
             {
                 year: 2022,
                 qualified: "5571 (From CCP: 3910, DLP: 1661)",
-                topRanks: "34 in Top 100 | 66 in Top 200 | 160 in Top 500"
+                topRanks: "34 in Top 100 | 66 in Top 200 | 160 in Top 500",
+                students: [
+                    // Add students details if available for 2022
+                ]
             },
             {
                 year: 2021,
                 qualified: "AIR 1 | 27 in Top 50 | 49 in Top 100",
-                topRanks: ""
+                topRanks: "",
+                students: [
+                    // Add students details if available for 2021
+                ]
             }
             // Add more data as needed
         ],
@@ -70,12 +78,18 @@ const ResultsHomePage = () => {
             {
                 year: 2020,
                 qualified: "15 in Top 50 | 35 in Top 100 | 66 in Top 200",
-                topRanks: ""
+                topRanks: "",
+                students: [
+                    // Add students details if available for 2020
+                ]
             },
             {
                 year: 2019,
                 qualified: "AIR 1 | 8 in Top 20 | 20 in Top 50 | 38 in Top 100",
-                topRanks: ""
+                topRanks: "",
+                students: [
+                    // Add students details if available for 2019
+                ]
             }
             // Add more data as needed
         ]
@@ -83,13 +97,12 @@ const ResultsHomePage = () => {
 
     const handleCategoryChange = (category) => {
         setSelectedCategory(category);
-        setSelectedYear(null); // Reset year selection when changing category
     };
 
     const handleViewMore = (year) => {
         const selectedResults = resultsData[selectedCategory];
         const selectedResult = selectedResults.find(result => result.year === year);
-        navigate('/results-main', { state: { selectedResult } }); // Updated
+        navigate('/results-main', { state: { selectedResult } });
     };
 
     const selectedResults = resultsData[selectedCategory];
