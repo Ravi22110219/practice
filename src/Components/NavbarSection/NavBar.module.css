@@ -2,7 +2,7 @@
   position: absolute;
   width: 100%;
   max-width: 2500px;
-
+  min-width: 400px;
   height: 83px;
   display: flex;
   align-items: center;
@@ -123,7 +123,7 @@
   padding: 10px;
   top: 100%;
   left: 0;
-  width: 200px;
+  /* width: 200px; */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-top-color: orange;
   z-index: 200;
