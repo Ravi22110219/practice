@@ -4,6 +4,7 @@ import styles from './ResultsHomePage.module.css';
 import Slider from '../../Components/SliderSection/Slider';
 
 const ResultsHomePage = () => {
+    window.scrollTo(0, 0);
     const [selectedCategory, setSelectedCategory] = useState('JEE (Advanced)');
     const [selectedYear, setSelectedYear] = useState(null);
     const navigate = useNavigate(); // Updated
@@ -98,7 +99,7 @@ const ResultsHomePage = () => {
             <Slider />
             <div className={styles.resultsPage}>
                 <div className={styles.section}>
-                    <h2>Competitive Exams Results</h2>
+                    <h2 className='py-2'>Exams Results</h2>
                     <div className={styles.buttonsContainer}>
                         {Object.keys(resultsData).map((category, index) => (
                             <button
