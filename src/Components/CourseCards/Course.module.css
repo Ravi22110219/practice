@@ -134,8 +134,7 @@
 
 @media(max-width: 560px) {
   .courseBox {
-      flex-basis: calc(calc(100% / 1));
-    ;
+      flex-basis: calc(calc(100% / 1) );
   }
 }
 /*   === Courses Section Ends ===   */
