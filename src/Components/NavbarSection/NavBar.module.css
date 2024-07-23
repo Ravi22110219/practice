@@ -2,9 +2,8 @@
   position: absolute;
   width: 100%;
   max-width: 2500px;
-  height: 12vh;
-  min-height: 83px;
-  max-height: 83px;
+  min-width: 350px;
+  height: 83px;
   display: flex;
   align-items: center;
   background-color: whitesmoke;
@@ -14,11 +13,12 @@
 
 .mainNavbar {
   width: 100%;
+  padding-left: 4%;
+  padding-right: 4%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 4%;
-  padding-right: 4%;
+ 
 }
 
 .home.active {
@@ -284,14 +284,12 @@
     color: #df0f0f;
   }
 
-  h1 {
-    font-weight: 700;
-  }
+ 
 
   .home {
     height: 5vh;
     min-height: 80px;
-    min-width: 400px;
+   
   }
   .mainNavbar .dropdown {
    

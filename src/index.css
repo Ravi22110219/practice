@@ -7,15 +7,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 
 html, body {
   width: 100%;
-  min-width: 400px;
   max-width: 2500px;
-  /* overflow-x: hidden; */
-  
-
+ 
+  min-width: 350px;
 }
 
