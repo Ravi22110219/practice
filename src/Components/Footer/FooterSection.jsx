@@ -116,7 +116,7 @@ class FooterSection extends Component {
           </div>
         </div>
         <div className={styles.copyRights}>
-          <p><a href="#">Terms of Use | Privacy Policy | Payment Terms | Refund & Cancellation | Disclaimer | Public Notice</a></p>
+          <p><a href="#">Terms of Use | Privacy Policy </a></p>
           <p>Created By <a href="https://ravi22110219.github.io/BidsukTechnoCreation/" className={styles.bidsukCompany}><b>Bidsuk Company</b></a> <span className="far fa-copyright"></span> 2024 All rights reserved.</p>
         </div>
       </section>
