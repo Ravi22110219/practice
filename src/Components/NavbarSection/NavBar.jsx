@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./NavBar.module.css";
-import logo from "../../assets/photoes/logo.png";
+import logo from "../../assets/photoes/Infinite New Logo .jpg";
 import { AiOutlineMenuFold, AiOutlineMenuUnfold } from "react-icons/ai";
 
 import { AiFillHome } from "react-icons/ai";
