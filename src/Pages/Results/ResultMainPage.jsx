@@ -21,7 +21,7 @@ const ResultMainPage = () => {
             
         <div className={styles.resultsMainPage}>
             <button className={styles.backButton} onClick={handleBack}>Back to Results Home</button>
-            <h2>Student Details for Year {selectedResult.year}</h2>
+            <h2 className='pb-2'>Student Details for Year {selectedResult.year}</h2>
             <div className={styles.studentDetails}>
                 {selectedResult.students?.map((student, index) => (
                     <div key={index} className={styles.studentCard}>
