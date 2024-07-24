@@ -43,7 +43,34 @@ const blogPosts = [
         As you prepare to script your own success story, remember that the journey doesn't end with admission to IIT Roorkee—it's just the beginning of a transformative chapter in your life. Dare to dream, strive for excellence, and let your journey inspire countless others to reach for the stars.
         `
     },
-    // Add more blog posts as needed
+ 
+  {
+      id: 2,
+      image: 'https://myexam.allen.in/wp-content/uploads/2024/07/JoSAA-Counselling-2024-Final-Round-Seat-Allotment-Released.jpg',
+      title: 'Blog title goes here',
+      description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!',
+      date: '21st May, 2022',
+      author: 'admin',
+      content: 'Full content of the blog post...'
+  },
+  {
+      id: 3,
+      image: 'https://myexam.allen.in/wp-content/uploads/2024/07/JoSAA-Counselling-2024-Final-Round-Seat-Allotment-Released.jpg',
+      title: 'Blog title goes here',
+      description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!',
+      date: '21st May, 2022',
+      author: 'admin',
+      content: 'Full content of the blog post...'
+  },
+  {
+      id: 4,
+      image: 'https://myexam.allen.in/wp-content/uploads/2024/07/JoSAA-Counselling-2024-Final-Round-Seat-Allotment-Released.jpg',
+      title: 'Blog title goes here',
+      description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!',
+      date: '21st May, 2022',
+      author: 'admin',
+      content: 'Full content of the blog post...'
+  },
 ];
 
 const BlogPage = () => {
