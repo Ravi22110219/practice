@@ -210,11 +210,11 @@
   }
 
   .blogImg {
-    height: 200px;
+    
   }
 
   .blogImg img {
-    height: 200px;
+    height: 100%;
   }
 }
 

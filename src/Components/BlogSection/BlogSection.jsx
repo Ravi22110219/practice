@@ -126,7 +126,7 @@ const BlogSection = () => {
               </div>
               <h4>JEE Main 2024 – Results of Many Students Withheld</h4>
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum animi, quasi veritatis cum culp....</p>
-              <div className='flex py-2'><button>Read </button><p>{Date.now(toString)}</p></div>
+           
             </li>
             {/* Add more cards as needed */}
           </ul>
