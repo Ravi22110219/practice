@@ -77,7 +77,7 @@ const BlogPage = () => {
                             <h2 className="display-5 link-body-emphasis p-3 mb-1">{post.title}</h2>
                             <hr className='mb-4'/>
                             <p className="blog-post-meta">{post.date} by <a href="#" className='text-red-500 '>{post.author}</a></p>
-                            <div className='text-lg font-medium pb-3'>{post.description}</div>
+                            <div className='text-sm font-medium pb-3'>{post.description}</div>
                             <hr className='mb-4'/>
                             <div className="blogImage">
                                 <img src={post.image} className="pb-3" alt={post.title} />
