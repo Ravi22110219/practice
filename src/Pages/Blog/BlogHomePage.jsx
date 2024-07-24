@@ -1,4 +1,6 @@
+// BlogHomePage.jsx
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './BlogHomePage.module.css';
 import { FaCalendar, FaUser } from 'react-icons/fa';
 
@@ -6,78 +8,91 @@ const BlogHomePage = () => {
     window.scrollTo(0, 0);
     const [currentItem, setCurrentItem] = useState(4);
     const [searchQuery, setSearchQuery] = useState('');
+    const navigate = useNavigate();
 
     const blogPosts = [
         {
+            id: 1,
             image: 'https://myexam.allen.in/wp-content/uploads/2024/07/JoSAA-Counselling-2024-Final-Round-Seat-Allotment-Released.jpg',
             title: 'Blog title goes here',
             description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!',
-            date: '21st may, 2022',
-            author: 'admin'
+            date: '21st May, 2022',
+            author: 'admin',
+            content: 'Full content of the blog post...'
         },
         {
+            id: 2,
             image: 'https://myexam.allen.in/wp-content/uploads/2024/07/JoSAA-Counselling-2024-Final-Round-Seat-Allotment-Released.jpg',
             title: 'Blog title goes here',
             description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!',
-            date: '21st may, 2022',
-            author: 'admin'
+            date: '21st May, 2022',
+            author: 'admin',
+            content: 'Full content of the blog post...'
         },
         {
+            id: 3,
             image: 'https://myexam.allen.in/wp-content/uploads/2024/07/JoSAA-Counselling-2024-Final-Round-Seat-Allotment-Released.jpg',
             title: 'Blog title goes here',
             description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!',
-            date: '21st may, 2022',
-            author: 'admin'
+            date: '21st May, 2022',
+            author: 'admin',
+            content: 'Full content of the blog post...'
         },
         {
+            id: 4,
             image: 'https://myexam.allen.in/wp-content/uploads/2024/07/JoSAA-Counselling-2024-Final-Round-Seat-Allotment-Released.jpg',
             title: 'Blog title goes here',
             description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!',
-            date: '21st may, 2022',
-            author: 'admin'
+            date: '21st May, 2022',
+            author: 'admin',
+            content: 'Full content of the blog post...'
         },
         {
+            id: 4,
             image: 'https://myexam.allen.in/wp-content/uploads/2024/07/JoSAA-Counselling-2024-Final-Round-Seat-Allotment-Released.jpg',
             title: 'Blog title goes here',
             description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!',
-            date: '21st may, 2022',
-            author: 'admin'
+            date: '21st May, 2022',
+            author: 'admin',
+            content: 'Full content of the blog post...'
         },
         {
+            id: 4,
             image: 'https://myexam.allen.in/wp-content/uploads/2024/07/JoSAA-Counselling-2024-Final-Round-Seat-Allotment-Released.jpg',
             title: 'Blog title goes here',
             description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!',
-            date: '21st may, 2022',
-            author: 'admin'
+            date: '21st May, 2022',
+            author: 'admin',
+            content: 'Full content of the blog post...'
         },
         {
+            id: 4,
             image: 'https://myexam.allen.in/wp-content/uploads/2024/07/JoSAA-Counselling-2024-Final-Round-Seat-Allotment-Released.jpg',
             title: 'Blog title goes here',
             description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!',
-            date: '21st may, 2022',
-            author: 'admin'
+            date: '21st May, 2022',
+            author: 'admin',
+            content: 'Full content of the blog post...'
         },
         {
-            image: 'https://myexam.allen.in/wp-content/uploads/2024/07/JoSAA-Counselling-2024-Final-Round-Seat-Allotment-Released.jpg',
-            title: 'Ram Seeta k ',
-            description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!',
-            date: '21st may, 2022',
-            author: 'admin'
-        },
-        {
+            id: 4,
             image: 'https://myexam.allen.in/wp-content/uploads/2024/07/JoSAA-Counselling-2024-Final-Round-Seat-Allotment-Released.jpg',
             title: 'Blog title goes here',
-            description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci! lormas dasfkj  sfnaj  jansf ndjosafnasl odmaomconadmo safnsadaldma ada csfd aosdcmoasco',
-            date: '21st may, 2022',
-            author: 'admin'
+            description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!',
+            date: '21st May, 2022',
+            author: 'admin',
+            content: 'Full content of the blog post...'
         },
         {
-          image: 'https://myexam.allen.in/wp-content/uploads/2024/07/JoSAA-Counselling-2024-Final-Round-Seat-Allotment-Released.jpg',
-          title: 'Blog title goes here',
-          description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci! lormas dasfkj  sfnaj  jansf ndjosafnasl odmaomconadmo safnsadaldma ada csfd aosdcmoasco',
-          date: '21st may, 2022',
-          author: 'admin'
-      },
+            id: 4,
+            image: 'https://myexam.allen.in/wp-content/uploads/2024/07/JoSAA-Counselling-2024-Final-Round-Seat-Allotment-Released.jpg',
+            title: 'Blog title goes here',
+            description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!',
+            date: '21st May, 2022',
+            author: 'admin',
+            content: 'Full content of the blog post...'
+        },
+        // Add more blog posts as needed
     ];
 
     const filteredPosts = blogPosts.filter(post => 
@@ -97,10 +112,13 @@ const BlogHomePage = () => {
         setSearchQuery(event.target.value);
     };
 
+    const handleCardClick = (postId) => {
+        navigate(`/blog/${postId}`);
+    };
+
     return (
         <div className={styles.container}>
             <header className={styles.sectionHeader}>
-               
                 <h1>You can search here</h1>
             </header>
 
@@ -113,8 +131,8 @@ const BlogHomePage = () => {
             />
 
             <div className={styles.boxContainer}>
-                {filteredPosts.slice(0, currentItem).map((post, index) => (
-                    <div className={styles.box} key={index}>
+                {filteredPosts.slice(0, currentItem).map((post) => (
+                    <div className={styles.box} key={post.id} onClick={() => handleCardClick(post.id)}>
                         <div className={styles.image}>
                             <img src={post.image} alt={post.title} />
                         </div>

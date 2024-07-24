@@ -18,7 +18,7 @@ import AdminBlogPage from './Pages/AdminPage/AdminBlogPage.jsx';
 import Scholarship from './Pages/FeeAndScholarship/Scholarship.jsx';
 import FeeRefundRules from './Pages/FeeAndScholarship/FeeRefundRules.jsx';
 import WhyChooseUs from './Pages/WhyChoiceUs/WhyChooseUs.jsx';
-import DirectorsAndteachers from './Pages/AboutUs/DirectorsAndteachers.jsx';
+import DirectorsAndTeachers from './Pages/AboutUs/DirectorsAndteachers.jsx';
 import BlogHomePage from './Pages/Blog/BlogHomePage.jsx';
 import CoursesAndBatchesNEET from './Pages/CoursesAndBatchesPage/CoursesAndBatchesNEET.jsx';
 import AboutCoaching from './Pages/AboutUs/AboutCoaching.jsx';
@@ -51,14 +51,15 @@ const router = createBrowserRouter([
         path: "aboutUs",
         children: [
           { path: "infiniteEduVerse", element: <AboutCoaching /> },
-          { path: "directorsandteachers", element: <DirectorsAndteachers /> },
+          { path: "directorsandteachers", element: <DirectorsAndTeachers /> },
           { path: "ourMotivation", element: <OurMotivation /> },
         ],
       },
-      { path: "blog", element: <BlogPage /> },
+      { path: "blog", element: <BlogHomePage /> },
+      { path: "blog/:postId", element: <BlogPage /> },
       { path: "gallery", element: <PhotoGallery /> },
       { path: "whychoiceus", element: <WhyChooseUs /> },
-      { path: "directorsandteachers", element: <DirectorsAndteachers /> },
+      { path: "directorsandteachers", element: <DirectorsAndTeachers /> },
     ],
   },
 ]);
