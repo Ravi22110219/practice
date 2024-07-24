@@ -17,7 +17,7 @@ const BlogHomePage = () => {
             title: 'Inspiring Success: The Journey to IIT Roorkee',
             description: 'The journey to IIT Roorkee begins with the dream of countless JEE aspirants across India....',
             date: '24th July, 2024',
-            author: 'admin',
+            author: 'Lakhveer Singh',
             content: 'The journey to IIT Roorkee begins...'
         },
         {
