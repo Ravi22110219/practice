@@ -11,14 +11,14 @@ const BlogHomePage = () => {
     const navigate = useNavigate();
 
     const blogPosts = [
-        {
+        {     
             id: 1,
-            image: 'https://myexam.allen.in/wp-content/uploads/2024/07/JoSAA-Counselling-2024-Final-Round-Seat-Allotment-Released.jpg',
-            title: 'Blog title goes here',
-            description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!',
-            date: '21st May, 2022',
+            image: 'https://www.iitr.ac.in/assets/56f4da26ed956730309fa1488611ee0f13b0ac95ebb1bc9b5d210e31ff70e79c_IITR12.jpg',
+            title: 'Inspiring Success: The Journey to IIT Roorkee',
+            description: 'The journey to IIT Roorkee begins with the dream of countless JEE aspirants across India. The Joint Entrance Examination (JEE) is not just a test; it\'s a gateway to prestigious institutions like IIT Roorkee, known for its illustrious history, academic excellence, and transformative impact on students\' lives.',
+            date: '24th July, 2024',
             author: 'admin',
-            content: 'Full content of the blog post...'
+            content: 'The journey to IIT Roorkee begins...'
         },
         {
             id: 2,
