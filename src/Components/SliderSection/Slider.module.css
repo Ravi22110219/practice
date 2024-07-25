@@ -4,12 +4,13 @@
   width: 100%;
   position: relative;
   overflow: hidden;
-  margin-top: 85px;
+ 
 }
 
 .slider .list {
   display: flex;
   transition: transform 1s ease-in-out;
+  margin-top: 7px;
 }
 
 .item {

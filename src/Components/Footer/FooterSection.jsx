@@ -111,14 +111,14 @@ class FooterSection extends Component {
                 <div className={styles.footerPart2Heading}>
                   <h3>Send a Message</h3>
                 </div>
-                <a className='text-gray-200'>infiniteacademysikar@gmail.com</a>
+                <a className='text-gray-200 flex'>infiniteacademysikar@gmail.com</a>
               </div>
             </div>
           </div>
         </div>
         <div className={styles.copyRights}>
           <p><a href="#">Terms of Use | Privacy Policy </a></p>
-          <p>Created By <a href="https://ravi22110219.github.io/BidsukTechnoCreation/" className={styles.bidsukCompany}><b>Bidsuk Company</b></a> <span className="far fa-copyright"></span> 2024 All rights reserved.</p>
+          <p>Created By <a href="https://ravi22110219.github.io/BidsukTechnoCreation/" className={styles.bidsukCompany}><b>Bidsuk Company</b></a> <span className="far fa-copyright">@</span> 2024 All rights reserved.</p>
         </div>
       </section>
     );
