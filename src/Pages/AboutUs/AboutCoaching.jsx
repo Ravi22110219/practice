@@ -3,6 +3,7 @@ import styles from './AboutCoaching.module.css';
 import coachingImg from '../../assets/photoes/Coaching_building_img.png'; // Replace with the path to your image
 
 const AboutCoaching = () => {
+    window.scrollTo(0, 0);
     return (
         <div className={styles.aboutCoaching}>
             <div className={styles.imageContainer}>
