@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './BlogHomePage.module.css';
 import { FaCalendar, FaUser } from 'react-icons/fa';
+import Neet_Scam from '../../assets/photoes/Neet_Scam.png'
 
 const BlogHomePage = () => {
     window.scrollTo(0, 0);
@@ -22,9 +23,9 @@ const BlogHomePage = () => {
         },
         {
             id: 2,
-            image: 'https://myexam.allen.in/wp-content/uploads/2024/07/JoSAA-Counselling-2024-Final-Round-Seat-Allotment-Released.jpg',
-            title: 'Blog title goes here',
-            description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!',
+            image: Neet_Scam,
+            title: 'The NEET Scam 2024: Uncovering the Truth Behind the Controversy',
+            description: 'The year 2024 has added a dire chapter to the annals of Indian education: the NEET Scam',
             date: '21st May, 2022',
             author: 'admin',
             content: 'Full content of the blog post...'
