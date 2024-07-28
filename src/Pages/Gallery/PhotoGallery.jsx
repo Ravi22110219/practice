@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 import styles from './PhotoGallery.module.css';
 import { FaHeart, FaDownload } from 'react-icons/fa';
@@ -31,6 +31,10 @@ const PhotoGallery = () => {
     const [likedImages, setLikedImages] = useState(new Array(photos.length).fill(false));
     const [currentPage, setCurrentPage] = useState(1);
     const imagesPerPage = 13;
+    
+    const startX = useRef(0);
+    const currentX = useRef(0);
+    const isDragging = useRef(false);
 
     const handleImageClick = (index) => {
         setModalImageIndex(index);
@@ -89,6 +93,27 @@ const PhotoGallery = () => {
             document.removeEventListener('keydown', handleKeyDown);
         };
     }, [modalImageIndex]);
+
+    const handleMouseDown = (e) => {
+        startX.current = e.clientX;
+        isDragging.current = true;
+    };
+
+    const handleMouseMove = (e) => {
+        if (!isDragging.current) return;
+        currentX.current = e.clientX;
+    };
+
+    const handleMouseUp = () => {
+        if (!isDragging.current) return;
+        const diffX = currentX.current - startX.current;
+        if (diffX > 50) {
+            handlePrevImage();
+        } else if (diffX < -50) {
+            handleNextImage();
+        }
+        isDragging.current = false;
+    };
 
     const indexOfLastImage = currentPage * imagesPerPage;
     const indexOfFirstImage = indexOfLastImage - imagesPerPage;
@@ -176,7 +201,13 @@ const PhotoGallery = () => {
             </div>
 
             {modalImageIndex !== null && (
-                <div className={styles.modal} onClick={handleCloseModal}>
+                <div
+                    className={styles.modal}
+                    onMouseDown={handleMouseDown}
+                    onMouseMove={handleMouseMove}
+                    onMouseUp={handleMouseUp}
+                    onClick={handleCloseModal}
+                >
                     <span className={styles.closeButton} onClick={handleCloseModal}>×</span>
                     <button className={`${styles.navButton} ${styles.left}`} onClick={(e) => { e.stopPropagation(); handlePrevImage(); }}>
                         ‹
