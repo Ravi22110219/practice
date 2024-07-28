@@ -57,9 +57,9 @@ const blogPosts = [
       id: 2,
       image: Neet_Scam,
       title: 'The NEET Scam 2024: Uncovering the Truth Behind the Controversy',
-      description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!',
+      description: 'The year 2024 has added a dire chapter to the annals of Indian education: the NEET Scam. As one of the most competitive and critical exams for aspiring medical students in India, ',
       date: '21st May, 2022',
-      author: 'M & R',
+      author: 'Bidsuk CEO',
       about:"",
       content: `<div>
  
