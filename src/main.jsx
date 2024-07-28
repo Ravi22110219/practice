@@ -13,6 +13,7 @@ import FeeStructure from './Pages/FeeAndScholarship/FeeStructure.jsx';
 import ResultsHomePage from './Pages/Results/ResultsHomePege.jsx'; // Correct the import
 import ResultMainPage from './Pages/Results/ResultMainPage.jsx'; // Import the ResultMainPage
 import BlogPage from './Pages/Blog/BlogPage.jsx';
+import GalleryHome from './Pages/Gallery/GalleyHome.jsx';
 import PhotoGallery from './Pages/Gallery/PhotoGallery.jsx';
 import AdminBlogPage from './Pages/AdminPage/AdminBlogPage.jsx';
 import Scholarship from './Pages/FeeAndScholarship/Scholarship.jsx';
@@ -57,7 +58,8 @@ const router = createBrowserRouter([
       },
       { path: "blog", element: <BlogHomePage /> },
       { path: "blog/:postId", element: <BlogPage /> },
-      { path: "gallery", element: <PhotoGallery /> },
+      { path: "gallery", element: <GalleryHome /> },
+      { path: "/gallery/:event", element: <PhotoGallery /> },
       { path: "whychoiceus", element: <WhyChooseUs /> },
       { path: "directorsandteachers", element: <DirectorsAndTeachers /> },
     ],

@@ -57,20 +57,20 @@ const FactsAndEnrollSections = () => {
           <h2>We strive to be the best in our field to make you even more comfortable</h2>
           <div className={styles.factBox}>
             <div className={styles.factItem}>
-              <h3>Events</h3>
-              <p className={styles.factNumber} data-count="540">0</p>
+              <h3>Start In</h3>
+              <p className={styles.factNumber} data-count="2020">0</p>
             </div>
             <div className={styles.factItem}>
-              <h3>Skilled Tutors</h3>
-              <p className={styles.factNumber} data-count="80">0</p>
+              <h3>Skilled Tutors & Staff</h3>
+              <p className={styles.factNumber} data-count="20">0</p>
             </div>
             <div className={styles.factItem}>
-              <h3>Online Courses</h3>
+              <h3>Online Free Classes</h3>
               <p className={styles.factNumber} data-count="200">0</p>
             </div>
             <div className={styles.factItem}>
               <h3>Students</h3>
-              <p className={styles.factNumber} data-count="73000">0</p>
+              <p className={styles.factNumber} data-count="3000">0</p>
             </div>
           </div>
         </div>
@@ -81,8 +81,7 @@ const FactsAndEnrollSections = () => {
         <div className={styles.enrollContents}>
           <div className={styles.enrollText}>
             <h3>Learn from expert tutors</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua.</p>
+            <p>Our dedicated team of expert educators and our advanced, student-centered learning system ensure a comprehensive and effective educational experience tailored to individual needs.</p>
           </div>
           <Link to={"/directorsandteachers"}>
           <button className={`${styles.btn} `}>Enroll Now</button></Link>

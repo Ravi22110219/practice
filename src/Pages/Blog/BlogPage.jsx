@@ -2,6 +2,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import './BlogPage.css';
+import Neet_Scam from '../../assets/photoes/Neet_Scam.png'
 
 const blogPosts = [
         {
@@ -12,50 +13,119 @@ const blogPosts = [
             date: '24th July, 2024',
             author: 'Lakhveer Singh',
             about:"Lakhveer Singh is a BTech student specializing in Computer Science and Engineering (CSE) at IIT Roorkee. Known for his dedication and enthusiasm in the field of technology, Lakhveer is actively involved in various academic and extracurricular activities at the institute. His journey reflects the vibrant and dynamic environment of IIT Roorkee, where students are empowered to excel both academically and personally.",
-            content: `
-            <h1 className='text-2xl font-semibold'>Introduction</h1>
-            The journey to IIT Roorkee begins with the dream of countless JEE aspirants across India. The Joint Entrance Examination (JEE) is not just a test; it's a gateway to prestigious institutions like IIT Roorkee, known for its illustrious history, academic excellence, and transformative impact on students' lives. As we delve into what makes IIT Roorkee special, let's uncover the journey that awaits those who dare to dream big and work hard.
-            <br>
-            <span className='text-black'>History and Prestige</span><br>
-            IIT Roorkee traces its origins back to 1847 when it was established as the Thomason College of Civil Engineering, making it one of the oldest technical institutions in India. Over the years, it has evolved into a leading hub of innovation and learning, playing a pivotal role in shaping the engineering landscape of the nation. Renamed as the University of Roorkee in 1949 and later as IIT Roorkee in 2001, the institute has garnered global recognition for its contributions to engineering education and research.
-    
-            <h2 className="text-xl font-semibold text-red-700">Academic Excellence</h2>
-            At the heart of IIT Roorkee's reputation lies its commitment to academic excellence. The institute offers a diverse range of undergraduate, postgraduate, and doctoral programs across various disciplines of engineering, technology, architecture, and management. The curriculum is designed to foster a deep understanding of theoretical concepts coupled with hands-on practical experience through state-of-the-art laboratories and research facilities.
-    
-            The faculty members at IIT Roorkee are renowned experts in their fields, actively engaged in cutting-edge research and innovation. Their mentorship and guidance empower students to explore new frontiers of knowledge and tackle real-world challenges. Additionally, the institute's emphasis on interdisciplinary studies encourages students to collaborate across different domains, fostering a holistic approach to learning.
-    
-            <h2 className="text-xl font-semibold text-red-700">Campus Life and Extracurricular Activities</h2>
-            Beyond academics, life at IIT Roorkee is vibrant and enriching. The campus buzzes with energy throughout the year, thanks to a myriad of student clubs, cultural festivals, and sports events. These extracurricular activities provide students with opportunities to develop leadership skills, pursue their passions, and forge lifelong friendships.
-    
-            From technical societies to performing arts groups, there's something for everyone at IIT Roorkee. Events like Thomso, the annual cultural festival, and Cognizance, the technical festival, showcase the creativity, talent, and ingenuity of the student community. Participation in such events not only enriches the overall college experience but also nurtures a spirit of innovation and entrepreneurship among students.
-    
-            <h2 className="text-xl font-semibold text-red-700">Alumni Achievements</h2>
-            The success stories of IIT Roorkee alumni serve as a testament to the institute's impact on shaping future leaders and trailblazers. Alumni from IIT Roorkee have made significant contributions across diverse fields, including engineering, business, academia, and public service. From pioneering groundbreaking technologies to leading multinational corporations, their achievements underscore the institute's role in producing global thought leaders and change-makers.
-    
-            Notable alumni include Dr. A.P.J. Abdul Kalam, former President of India and renowned aerospace scientist, and Satya Nadella, CEO of Microsoft, among many others. Their journeys from the corridors of IIT Roorkee to the pinnacles of success inspire current students and aspiring JEE candidates to aim high and pursue excellence in their chosen paths.
-    
-            <h2 className="text-xl font-semibold text-red-700">About the Author</h2>
-        
-            <h1 className="text-xl font-semibold text-red-700">Conclusion</h1>
-            In conclusion, the journey to IIT Roorkee is a testament to the power of dreams, hard work, and resilience. As you embark on your quest to crack the JEE exam and secure admission to this prestigious institute, remember that every challenge is an opportunity for growth and every setback is a stepping stone to success.
-    
-            IIT Roorkee stands as a beacon of excellence, where innovation meets tradition and aspirations turn into achievements. Let the stories of its illustrious history, academic prowess, vibrant campus life, and inspiring alumni fuel your determination to excel. Embrace the journey, believe in yourself, and seize every opportunity to learn, grow, and make a difference in the world.
-    
-            As you prepare to script your own success story, remember that the journey doesn't end with admission to IIT Roorkee—it's just the beginning of a transformative chapter in your life. Dare to dream, strive for excellence, and let your journey inspire countless others to reach for the stars.
-            `
+            content: `<div>
+  <h3 style="font-weight: 600; font-size: 1.5rem; padding-top: 1rem; padding-bottom: 1rem;">Introduction</h3>
+  <p>The journey to IIT Roorkee begins with the dream of countless JEE aspirants across India. The Joint Entrance Examination (JEE) is not just a test; it's a gateway to prestigious institutions like IIT Roorkee, known for its illustrious history, academic excellence, and transformative impact on students' lives. As we delve into what makes IIT Roorkee special, let's uncover the journey that awaits those who dare to dream big and work hard.</p>
+  
+  <h3 style="font-weight: 600; font-size: 1.5rem; padding-top: 1rem; padding-bottom: 1rem;">History and Prestige</h3>
+  <p>IIT Roorkee traces its origins back to 1847 when it was established as the Thomason College of Civil Engineering, making it one of the oldest technical institutions in India. Over the years, it has evolved into a leading hub of innovation and learning, playing a pivotal role in shaping the engineering landscape of the nation. Renamed as the University of Roorkee in 1949 and later as IIT Roorkee in 2001, the institute has garnered global recognition for its contributions to engineering education and research.</p>
+  
+  <h3 style="font-weight: 600; font-size: 1.5rem; padding-top: 1rem; padding-bottom: 1rem;">Academic Excellence</h3>
+  <p>At the heart of IIT Roorkee's reputation lies its commitment to academic excellence. The institute offers a diverse range of undergraduate, postgraduate, and doctoral programs across various disciplines of engineering, technology, architecture, and management. The curriculum is designed to foster a deep understanding of theoretical concepts coupled with hands-on practical experience through state-of-the-art laboratories and research facilities.</p>
+  <p>The faculty members at IIT Roorkee are renowned experts in their fields, actively engaged in cutting-edge research and innovation. Their mentorship and guidance empower students to explore new frontiers of knowledge and tackle real-world challenges. Additionally, the institute's emphasis on interdisciplinary studies encourages students to collaborate across different domains, fostering a holistic approach to learning.</p>
+  
+  <h3 style="font-weight: 600; font-size: 1.5rem; padding-top: 1rem; padding-bottom: 1rem;">Campus Life and Extracurricular Activities</h3>
+  <p>Beyond academics, life at IIT Roorkee is vibrant and enriching. The campus buzzes with energy throughout the year, thanks to a myriad of student clubs, cultural festivals, and sports events. These extracurricular activities provide students with opportunities to develop leadership skills, pursue their passions, and forge lifelong friendships.</p>
+  <p>From technical societies to performing arts groups, there's something for everyone at IIT Roorkee. Events like Thomso, the annual cultural festival, and Cognizance, the technical festival, showcase the creativity, talent, and ingenuity of the student community. Participation in such events not only enriches the overall college experience but also nurtures a spirit of innovation and entrepreneurship among students.</p>
+  
+  <h3 style="font-weight: 600; font-size: 1.5rem; padding-top: 1rem; padding-bottom: 1rem;">Alumni Achievements</h3>
+  <p>The success stories of IIT Roorkee alumni serve as a testament to the institute's impact on shaping future leaders and trailblazers. Alumni from IIT Roorkee have made significant contributions across diverse fields, including engineering, business, academia, and public service. From pioneering groundbreaking technologies to leading multinational corporations, their achievements underscore the institute's role in producing global thought leaders and change-makers.</p>
+  <p>Notable alumni include Dr. A.P.J. Abdul Kalam, former President of India and renowned aerospace scientist, and Satya Nadella, CEO of Microsoft, among many others. Their journeys from the corridors of IIT Roorkee to the pinnacles of success inspire current students and aspiring JEE candidates to aim high and pursue excellence in their chosen paths.</p>
+  
+  <h3 style="font-weight: bold; color: #8B0000; font-size: 1.5rem; padding-top: 1rem; padding-bottom: 1rem;">Tips for JEE Aspirants:</h3>
+  <ul style="list-style-type: disc; font-size: 1.125rem; font-weight: 500; color: #8B0000; padding-left: 1.25rem;">
+    <li>Start Early: Begin your preparation well in advance to cover the vast syllabus systematically.</li>
+    <li>Understand Concepts: Focus on building a strong foundation in fundamental concepts rather than rote memorization.</li>
+    <li>Practice Regularly: Solve previous years' papers and mock tests to familiarize yourself with the exam pattern and improve time management skills.</li>
+    <li>Seek Guidance: Enroll in coaching classes or join study groups to benefit from expert guidance and peer support.</li>
+    <li>Stay Motivated: Maintain a positive mindset, stay disciplined, and balance your study schedule with adequate breaks and relaxation.</li>
+  </ul>
+  
+  <h3 style="font-weight: 600; font-size: 1.5rem; padding-top: 1rem; padding-bottom: 1rem;">Conclusion</h3>
+  <p>In conclusion, the journey to IIT Roorkee is a testament to the power of dreams, hard work, and resilience. As you embark on your quest to crack the JEE exam and secure admission to this prestigious institute, remember that every challenge is an opportunity for growth and every setback is a stepping stone to success.</p>
+  <p>IIT Roorkee stands as a beacon of excellence, where innovation meets tradition and aspirations turn into achievements. Let the stories of its illustrious history, academic prowess, vibrant campus life, and inspiring alumni fuel your determination to excel. Embrace the journey, believe in yourself, and seize every opportunity to learn, grow, and make a difference in the world.</p>
+  <p>As you prepare to script your own success story, remember that the journey doesn't end with admission to IIT Roorkee—it's just the beginning of a transformative chapter in your life. Dare to dream, strive for excellence, and let your journey inspire countless others to reach for the stars.</p>
+</div>
+`,
+           
+            
         },
    
     
  
   {
       id: 2,
-      image: 'https://myexam.allen.in/wp-content/uploads/2024/07/JoSAA-Counselling-2024-Final-Round-Seat-Allotment-Released.jpg',
-      title: 'Blog title goes here',
+      image: Neet_Scam,
+      title: 'The NEET Scam 2024: Uncovering the Truth Behind the Controversy',
       description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!',
       date: '21st May, 2022',
-      author: 'admin',
+      author: 'M & R',
       about:"",
-      content: 'Full content of the blog post...'
+      content: `<div>
+ 
+  <h3 style="font-weight: 600; font-size: 1.5rem; padding-top: 1rem; padding-bottom: 1rem;">Introduction</h3>
+  <p>
+    The year 2024 has added a dire chapter to the annals of Indian education: the NEET Scam. As one of the most competitive and critical exams for aspiring medical students in India, the National Eligibility cum Entrance Test (NEET) is the cornerstone for securing admissions into premier medical colleges across the country. However, this year's scandal has sent shockwaves through students, parents, educators, and authorities alike.
+  </p>
+
+  <h3 style="font-weight: 600; font-size: 1.5rem; padding-top: 1rem; padding-bottom: 1rem;">What Happened?</h3>
+  <p>
+    It all began with whispers of irregularities surfacing on social media, which soon morphed into a full-blown NEET scam revealed by investigative journalists. The scam involved a sophisticated nexus of agents, dummy candidates, insiders from examination centers, and even some officials from the organizing body. It exposed how these corrupt elements manipulated the system, allowing undeserving candidates to score high marks, thus securing medical seats unfairly.
+  </p>
+
+  <h3 style="font-weight: 600; font-size: 1.5rem; padding-top: 1rem; padding-bottom: 1rem;">Key Revelations</h3>
+  <ul style="list-style-type: disc; font-size: 1.125rem; font-weight: 500; color: #8B0000; padding-left: 1.25rem;">
+    <li>
+      <strong>Substitution of Candidates:</strong> Perhaps the most shocking revelation was the use of 'dummy' candidates. These were individuals who stepped in to take the exam on behalf of registered candidates, ensuring high scores through academic proficiency. The substitution often occurred with sophisticated identity forgeries and the complicity of examination center officials.
+    </li>
+    <li>
+      <strong>Leaked Question Papers:</strong> Authorities also found that NEET question papers were leaked well before the exam date. Select candidates received these papers, giving them an undue advantage over others who had to take the test under fair conditions. Investigations traced these leaks back to compromised printing and distribution channels.
+    </li>
+    <li>
+      <strong>Bribes and Payoffs:</strong> Substantial sums of money changed hands, implicating not just the agents and middlemen but also some officials from the examination governing body. Bribes facilitated everything from the leaking of question papers to the substitution of candidates and manipulation of exam results.
+    </li>
+  </ul>
+
+  <h3 style="font-weight: 600; font-size: 1.5rem; padding-top: 1rem; padding-bottom: 1rem;">The Impact on Students</h3>
+  <ul style="list-style-type: disc; font-size: 1.125rem; font-weight: 500; color: #8B0000; padding-left: 1.25rem;">
+    <li>
+      <strong>Stress and Anxiety:</strong> The immediate fallout has been devastating for honest, hardworking students. Many have expressed profound disappointment and disbelief, questioning the integrity of the examination system. This has led to increased stress and anxiety among students, who are now skeptical of the transparency and fairness of competitive exams.
+    </li>
+    <li>
+      <strong>Calls for Re-Examination:</strong> Several student bodies and educational organizations have called for the annulment of the 2024 NEET exam results and demanded a re-examination. They argue that the results are tainted and do not reflect the true capabilities of the candidates.
+    </li>
+    <li>
+      <strong>Legal Battles:</strong> Parents and affected students have also initiated legal action, seeking justice and accountability. The judiciary is now embroiled in multiple cases aimed at unraveling the full extent of the scam and ensuring that those responsible are held accountable.
+    </li>
+  </ul>
+
+  <h3 style="font-weight: 600; font-size: 1.5rem; padding-top: 1rem; padding-bottom: 1rem;">Government and Public Response</h3>
+  <ul style="list-style-type: disc; font-size: 1.125rem; font-weight: 500; color: #8B0000; padding-left: 1.25rem;">
+    <li>
+      <strong>Official Inquiries:</strong> The government has launched a series of inquiries headed by high-level officials and educational experts. These probes aim to identify the loopholes in the current system and recommend comprehensive reforms to prevent such scams in the future.
+    </li>
+    <li>
+      <strong>Public Outcry:</strong> Public sentiment is overwhelmingly against the perpetrators of the scam. Across social media platforms, there have been widespread calls for stringent punishments and systemic reforms. Prominent educationists, activists, and celebrities have also voiced their concerns, adding pressure on the authorities to act swiftly and decisively.
+    </li>
+    <li>
+      <strong>Proposals for Reform:</strong> In light of the scam, several proposals have emerged to reform the NEET examination process. Suggested measures include enhanced biometric verification, the use of blockchain for question paper security, real-time surveillance of examination centers, and severe penalties for any fraudulent activity.
+    </li>
+  </ul>
+
+  <h3 style="font-weight: 600; font-size: 1.5rem; padding-top: 1rem; padding-bottom: 1rem;">Moving Forward</h3>
+  <p>
+    The NEET Scam 2024 has undoubtedly shaken the foundation of India's medical entrance examination system. However, it also presents an opportunity for introspection and reform. The focus should now be on restoring faith in the examination process through transparency, accountability, and technological advancements.
+  </p>
+  <p>
+    By learning from this debacle, we can work towards creating a more robust, fair, and transparent examination system. The aspirations and futures of millions of students depend on it.
+  </p>
+
+  <h3 style="font-weight: 600; font-size: 1.5rem; padding-top: 1rem; padding-bottom: 1rem;">Call to Action</h3>
+  <p>
+    If you're a student or parent affected by the NEET Scam 2024, don't hesitate to reach out to support groups and legal experts for guidance. Let your voice be heard through petitions and social media campaigns. Remember, collective action can drive significant change. Let's work together to ensure such a debacle never happens again.
+  </p>
+</div>`
+
   },
   {
       id: 3,
@@ -115,7 +185,7 @@ const BlogPage = () => {
                             <div className="blogImage">
                                 <img src={post.image} className="pb-3" alt={post.title} />
                             </div>
-                            <div dangerouslySetInnerHTML={{ __html: post.content }} />
+                            <div  dangerouslySetInnerHTML={{ __html: post.content }} ></div>
                         </article>
                     </div>
 

@@ -20,8 +20,7 @@ const AboutSection = () => {
         </header>
         {/* === Section Header Ends === */}
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-          et dolore magna aliqua. Ut enim ad minim veniam.
+        Our exceptional faculty and comprehensive curriculum ensure that you receive the highest quality education. With personalized guidance and state-of-the-art facilities.
         </p>
         <ul className={styles.aboutList}>
           <li check="&#10004;">Excellent Faculty Team

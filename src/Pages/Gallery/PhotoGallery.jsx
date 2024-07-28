@@ -1,41 +1,31 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import styles from './PhotoGallery.module.css';
-
 import { FaHeart, FaDownload } from 'react-icons/fa';
 import { GrGallery } from "react-icons/gr";
 
-const photos = [
-  { src: 'https://princeschoolsikar.com/assets/result/12-2022.jpg', alt: 'A boy surrounded by beautiful nature' },
-  { src: 'https://jpsschooljaisinghpura.github.io/.ac.in/back_to_school_facebook_cover_34.jpg', alt: 'What a beautiful scenery this sunset' },
-  { src: 'https://ravi22110219.github.io/BidsukTechnoCreation/Ravi%20Kumawat.jpg', alt: 'The Beach. Me. Alone. Beautiful' },
-  { src: 'https://www.w3schools.com/w3images/girl_mountain.jpg', alt: 'Quiet day at the beach. Cold, but beautiful' },
-  { src: 'https://www.w3schools.com/w3images/man_bench.jpg', alt: 'Waiting for the bus in the desert' },
-  { src: 'https://www.w3schools.com/w3images/girl_train.jpg', alt: 'Nature again.. At its finest!' },
-  { src: 'https://www.w3schools.com/w3images/girl.jpg', alt: 'Canoeing again' },
-  { src: 'https://www.w3schools.com/w3images/closegirl.jpg', alt: 'A girl, and a train passing' },
-  { src: 'https://www.w3schools.com/w3images/closegirl.jpg', alt: 'What a beautiful day!' },
-  { src: 'https://www.w3schools.com/w3images/natureboy.jpg', alt: 'A boy surrounded by beautiful nature' },
-  { src: 'https://www.w3schools.com/w3images/boy.jpg', alt: 'What a beautiful scenery this sunset' },
-  { src: 'https://www.w3schools.com/w3images/girl.jpg', alt: 'The Beach. Me. Alone. Beautiful' },
-  { src: 'https://www.w3schools.com/w3images/girl_mountain.jpg', alt: 'Quiet day at the beach. Cold, but beautiful' },
-  { src: 'https://www.w3schools.com/w3images/man_bench.jpg', alt: 'Waiting for the bus in the desert' },
-  { src: 'https://www.w3schools.com/w3images/girl_train.jpg', alt: 'Nature again.. At its finest!' },
-  { src: 'https://www.w3schools.com/w3images/girl.jpg', alt: 'Canoeing again' },
-  { src: 'https://www.w3schools.com/w3images/closegirl.jpg', alt: 'A girl, and a train passing' },
-  { src: 'https://www.w3schools.com/w3images/closegirl.jpg', alt: 'What a beautiful day!' },
-  { src: 'https://www.w3schools.com/w3images/natureboy.jpg', alt: 'A boy surrounded by beautiful nature' },
-  { src: 'https://www.w3schools.com/w3images/boy.jpg', alt: 'What a beautiful scenery this sunset' },
-  { src: 'https://www.w3schools.com/w3images/girl.jpg', alt: 'The Beach. Me. Alone. Beautiful' },
-  { src: 'https://www.w3schools.com/w3images/girl_mountain.jpg', alt: 'Quiet day at the beach. Cold, but beautiful' },
-  { src: 'https://www.w3schools.com/w3images/man_bench.jpg', alt: 'Waiting for the bus in the desert' },
-  { src: 'https://www.w3schools.com/w3images/girl_train.jpg', alt: 'Nature again.. At its finest!' },
-  { src: 'https://www.w3schools.com/w3images/girl.jpg', alt: 'Canoeing again' },
-  { src: 'https://www.w3schools.com/w3images/closegirl.jpg', alt: 'A girl, and a train passing' },
-  { src: 'https://www.w3schools.com/w3images/closegirl.jpg', alt: 'What a beautiful day!' },
-];
+const eventPhotos = {
+  "short-title": [
+    { src: 'https://princeschoolsikar.com/assets/result/12-2022.jpg', alt: 'A boy surrounded by beautiful nature' },
+    { src: 'https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=400', alt: 'A boy surrounded by beautiful nature' },
+    { src: 'https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=400', alt: 'A boy surrounded by beautiful nature' },
+    { src: 'https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=400', alt: 'A boy surrounded by beautiful nature' },
+    // Add more photos here
+  ],
+  "longer-title": [
+    { src: 'https://jpsschooljaisinghpura.github.io/.ac.in/back_to_school_facebook_cover_34.jpg', alt: 'What a beautiful scenery this sunset' },
+    // Add more photos here
+  ],
+  "another-title": [
+    { src: 'https://ravi22110219.github.io/BidsukTechnoCreation/Ravi%20Kumawat.jpg', alt: 'The Beach. Me. Alone. Beautiful' },
+    // Add more photos here
+  ]
+};
 
 const PhotoGallery = () => {
-    window.scrollTo(0, 0);
+    const { event } = useParams();
+    const photos = eventPhotos[event] || [];
+
     const [modalImageIndex, setModalImageIndex] = useState(null);
     const [gridSize, setGridSize] = useState(3);
     const [likedImages, setLikedImages] = useState(new Array(photos.length).fill(false));
@@ -108,18 +98,18 @@ const PhotoGallery = () => {
 
     return (
         <>
-          
-          <div className="w-full bg-gray-800 h-40 mt-20 flex items-center justify-center">
-            <div className="w-5/6 mx-auto">
-                <h1 className="text-center text-white text-4xl"><GrGallery className="inline mr-2" />Gallery</h1>
+            <div className={styles.blogBanner}>
+                <div className={styles.headingBanner}>
+                    <h1 className={styles.headingBanner}><GrGallery className={styles.bannerIcon} />Photo Gallery</h1>
+                </div>
             </div>
-        </div>
-            <div className={`py-4 ${styles.lightGreyBackground} ${styles.contentContainer}`}>
+
+            <div className={`${styles.lightGreyBackground} ${styles.contentContainer}`}>
                 <div className={styles.gridButtons}>
-                    <label htmlFor="gridSizeRange" className="form-label">Grid Size: {gridSize}</label>
+                    <label htmlFor="gridSizeRange" className={styles.formLabel}>Grid Size: {gridSize}</label>
                     <input
                         type="range"
-                        className="form-range"
+                        className={styles.formRange}
                         min="1"
                         max="5"
                         step="1"
@@ -137,10 +127,8 @@ const PhotoGallery = () => {
                                 alt={photo.alt}
                                 className={styles.photo}
                                 onClick={() => handleImageClick(indexOfFirstImage + index)}
-
-                                
                             />
-                               <div className={styles.overlay}>
+                            <div className={styles.overlay}>
                                 <button
                                     className={`${styles.iconButtons} ${likedImages[index] ? styles.liked : ''}`}
                                     onClick={() => handleLikeClick(index)}
@@ -189,7 +177,7 @@ const PhotoGallery = () => {
 
             {modalImageIndex !== null && (
                 <div className={styles.modal} onClick={handleCloseModal}>
-                   <span className={styles.closeButton} onClick={handleCloseModal}>×</span>
+                    <span className={styles.closeButton} onClick={handleCloseModal}>×</span>
                     <button className={`${styles.navButton} ${styles.left}`} onClick={(e) => { e.stopPropagation(); handlePrevImage(); }}>
                         ‹
                     </button>
@@ -204,8 +192,6 @@ const PhotoGallery = () => {
                     </div>
                 </div>
             )}
-
-           
         </>
     );
 };
