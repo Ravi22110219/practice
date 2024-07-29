@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./NewsAndNotification.module.css";
+import mainNav from '../../assets/photoes/mainNav.jpg'
 
 const NewsAndNotification = () => {
   const sliderListRef = useRef(null);
@@ -43,7 +44,7 @@ const NewsAndNotification = () => {
           <div className={styles.mainSlider}>
             <div className={styles.mainSliderList} ref={sliderListRef}>
               <div className={styles.mainSliderItem} ref={(el) => sliderItemsRef.current[0] = el}>
-                <img src="https://allenwebsite-general.s3.ap-south-1.amazonaws.com/slider/images/book-store-jee-main-topic-wise-papers.jpg" alt="SliderImage" style={{ objectFit: "cover" }} />
+                <img src={mainNav} alt="SliderImage" style={{ objectFit: "cover" }} />
               </div>
               <div className={styles.mainSliderItem} ref={(el) => sliderItemsRef.current[1] = el}>
                 <img src="https://allenwebsite-general.s3.ap-south-1.amazonaws.com/slider/images/summer-workshop-vedic-maths-kota.png" alt="SliderImage" />

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styles from './Slider.module.css';
 
 // Import your images
-import image1 from '../../assets/photoes/image-1.jpg';
+import image1 from '../../assets/photoes/slider.jpg';
 import image2 from '../../assets/photoes/image-2.jpg';
 
 const images = [image1, image2, image1, image2, image1];

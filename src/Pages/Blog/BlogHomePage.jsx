@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import styles from './BlogHomePage.module.css';
 import { FaCalendar, FaUser } from 'react-icons/fa';
 import Neet_Scam from '../../assets/photoes/Neet_Scam.png'
+import Infinite_Eduverse from '../../assets/photoes/blog.jpg'
 
 const BlogHomePage = () => {
     window.scrollTo(0, 0);
@@ -27,72 +28,72 @@ const BlogHomePage = () => {
             title: 'The NEET Scam 2024: Uncovering the Truth Behind the Controversy',
             description: 'The year 2024 has added a dire chapter to the annals of Indian education: the NEET Scam',
             date: '21st May, 2022',
-            author: 'admin',
+            author: 'Bidsuk CEO',
             content: 'Full content of the blog post...'
         },
         {
             id: 3,
-            image: 'https://myexam.allen.in/wp-content/uploads/2024/07/JoSAA-Counselling-2024-Final-Round-Seat-Allotment-Released.jpg',
-            title: 'Blog title goes here',
-            description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!',
-            date: '21st May, 2022',
-            author: 'admin',
+            image: Infinite_Eduverse,
+            title: 'Why Infinite EduVerse is the Best Choice for NEET and JEE Preparation',
+            description: 'Infinite EduVerse stands out as a premier institute for NEET and JEE preparation...',
+            date: '29st May, 2022',
+            author: 'Naushad Khan',
             content: 'Full content of the blog post...'
         },
-        {
-            id: 4,
-            image: 'https://myexam.allen.in/wp-content/uploads/2024/07/JoSAA-Counselling-2024-Final-Round-Seat-Allotment-Released.jpg',
-            title: 'Blog title goes here',
-            description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!',
-            date: '21st May, 2022',
-            author: 'admin',
-            content: 'Full content of the blog post...'
-        },
-        {
-            id: 4,
-            image: 'https://myexam.allen.in/wp-content/uploads/2024/07/JoSAA-Counselling-2024-Final-Round-Seat-Allotment-Released.jpg',
-            title: 'Blog title goes here',
-            description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!',
-            date: '21st May, 2022',
-            author: 'admin',
-            content: 'Full content of the blog post...'
-        },
-        {
-            id: 4,
-            image: 'https://myexam.allen.in/wp-content/uploads/2024/07/JoSAA-Counselling-2024-Final-Round-Seat-Allotment-Released.jpg',
-            title: 'Blog title goes here',
-            description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!',
-            date: '21st May, 2022',
-            author: 'admin',
-            content: 'Full content of the blog post...'
-        },
-        {
-            id: 4,
-            image: 'https://myexam.allen.in/wp-content/uploads/2024/07/JoSAA-Counselling-2024-Final-Round-Seat-Allotment-Released.jpg',
-            title: 'Blog title goes here',
-            description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!',
-            date: '21st May, 2022',
-            author: 'admin',
-            content: 'Full content of the blog post...'
-        },
-        {
-            id: 4,
-            image: 'https://myexam.allen.in/wp-content/uploads/2024/07/JoSAA-Counselling-2024-Final-Round-Seat-Allotment-Released.jpg',
-            title: 'Blog title goes here',
-            description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!',
-            date: '21st May, 2022',
-            author: 'admin',
-            content: 'Full content of the blog post...'
-        },
-        {
-            id: 4,
-            image: 'https://myexam.allen.in/wp-content/uploads/2024/07/JoSAA-Counselling-2024-Final-Round-Seat-Allotment-Released.jpg',
-            title: 'Blog title goes here',
-            description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!',
-            date: '21st May, 2022',
-            author: 'admin',
-            content: 'Full content of the blog post...'
-        },
+        // {
+        //     id: 4,
+        //     image: 'https://myexam.allen.in/wp-content/uploads/2024/07/JoSAA-Counselling-2024-Final-Round-Seat-Allotment-Released.jpg',
+        //     title: 'Blog title goes here',
+        //     description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!',
+        //     date: '21st May, 2022',
+        //     author: 'admin',
+        //     content: 'Full content of the blog post...'
+        // },
+        // {
+        //     id: 4,
+        //     image: 'https://myexam.allen.in/wp-content/uploads/2024/07/JoSAA-Counselling-2024-Final-Round-Seat-Allotment-Released.jpg',
+        //     title: 'Blog title goes here',
+        //     description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!',
+        //     date: '21st May, 2022',
+        //     author: 'admin',
+        //     content: 'Full content of the blog post...'
+        // },
+        // {
+        //     id: 4,
+        //     image: 'https://myexam.allen.in/wp-content/uploads/2024/07/JoSAA-Counselling-2024-Final-Round-Seat-Allotment-Released.jpg',
+        //     title: 'Blog title goes here',
+        //     description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!',
+        //     date: '21st May, 2022',
+        //     author: 'admin',
+        //     content: 'Full content of the blog post...'
+        // },
+        // {
+        //     id: 4,
+        //     image: 'https://myexam.allen.in/wp-content/uploads/2024/07/JoSAA-Counselling-2024-Final-Round-Seat-Allotment-Released.jpg',
+        //     title: 'Blog title goes here',
+        //     description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!',
+        //     date: '21st May, 2022',
+        //     author: 'admin',
+        //     content: 'Full content of the blog post...'
+        // },
+        // {
+        //     id: 4,
+        //     image: 'https://myexam.allen.in/wp-content/uploads/2024/07/JoSAA-Counselling-2024-Final-Round-Seat-Allotment-Released.jpg',
+        //     title: 'Blog title goes here',
+        //     description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!',
+        //     date: '21st May, 2022',
+        //     author: 'admin',
+        //     content: 'Full content of the blog post...'
+        // },
+        // {
+        //     id: 4,
+        //     image: 'https://myexam.allen.in/wp-content/uploads/2024/07/JoSAA-Counselling-2024-Final-Round-Seat-Allotment-Released.jpg',
+        //     title: 'Blog title goes here',
+        //     description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!',
+        //     date: '21st May, 2022',
+        //     author: 'admin',
+        //     content: 'Full content of the blog post...'
+        // },
         // Add more blog posts as needed
     ];
 

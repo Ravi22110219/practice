@@ -10,6 +10,18 @@ const eventPhotos = {
     { src: 'https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=400', alt: 'A boy surrounded by beautiful nature' },
     { src: 'https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=400', alt: 'A boy surrounded by beautiful nature' },
     { src: 'https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=400', alt: 'A boy surrounded by beautiful nature' },
+    { src: 'https://princeschoolsikar.com/assets/result/12-2022.jpg', alt: 'A boy surrounded by beautiful nature' },
+    { src: 'https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=400', alt: 'A boy surrounded by beautiful nature' },
+    { src: 'https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=400', alt: 'A boy surrounded by beautiful nature' },
+    { src: 'https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=400', alt: 'A boy surrounded by beautiful nature' },
+    { src: 'https://princeschoolsikar.com/assets/result/12-2022.jpg', alt: 'A boy surrounded by beautiful nature' },
+    { src: 'https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=400', alt: 'A boy surrounded by beautiful nature' },
+    { src: 'https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=400', alt: 'A boy surrounded by beautiful nature' },
+    { src: 'https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=400', alt: 'A boy surrounded by beautiful nature' },
+    { src: 'https://princeschoolsikar.com/assets/result/12-2022.jpg', alt: 'A boy surrounded by beautiful nature' },
+    { src: 'https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=400', alt: 'A boy surrounded by beautiful nature' },
+    { src: 'https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=400', alt: 'A boy surrounded by beautiful nature' },
+    { src: 'https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=400', alt: 'A boy surrounded by beautiful nature' },
     // Add more photos here
   ],
   "longer-title": [
@@ -146,7 +158,7 @@ const PhotoGallery = () => {
 
                 <div className={styles.photoGrid}>
                     {currentImages.map((photo, index) => (
-                        <div className={styles.photoColumn} key={index} style={{ flex: `1 1 calc(${100 / gridSize}% - 1rem)` }}>
+                        <div className={styles.photoColumn} key={index} style={{ flex: `1 1 calc(${90 / gridSize}% - 1rem)` }}>
                             <img
                                 src={photo.src}
                                 alt={photo.alt}

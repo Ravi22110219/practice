@@ -29,7 +29,7 @@ const ResultMainPage = () => {
                         <div className={styles.studentInfo}>
                             <h4>{student.name}</h4>
                             <p>AIR: {student.air}</p>
-                            <p>AF No.: {student.afNo} [{student.category}]</p>
+                            <p>College: {student.afNo} [{student.category}]</p>
                         </div>
                     </div>
                 ))}

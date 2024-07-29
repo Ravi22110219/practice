@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from './BlogSection.module.css';
 import { FaCalendar, FaUser } from 'react-icons/fa';
 import Neet_Scam from '../../assets/photoes/Neet_Scam.png'
+import Infinite_Eduverse from '../../assets/photoes/blog.jpg'
 
 const BlogSection = () => {
   useEffect(() => {
@@ -120,6 +121,14 @@ const BlogSection = () => {
       date: "20th june",
       author:"Bidsuk CEO",
     },
+    { 
+      id: 3,
+      imgSrc: Infinite_Eduverse,
+      title: 'Why Infinite EduVerse is the Best Choice for NEET and JEE Preparation',
+      description: 'Infinite EduVerse stands out as a premier institute for NEET and JEE preparation...',
+      date: '29st May, 2022',
+      author: 'Naushad Khan',
+    }
     // Add more blog objects as needed
   ];
 

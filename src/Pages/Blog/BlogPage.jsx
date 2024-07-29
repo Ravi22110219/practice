@@ -3,6 +3,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import './BlogPage.css';
 import Neet_Scam from '../../assets/photoes/Neet_Scam.png'
+import Infinite_Eduverse from '../../assets/photoes/blog.jpg'
 
 const blogPosts = [
         {
@@ -127,15 +128,102 @@ const blogPosts = [
 </div>`
 
   },
+
   {
-      id: 3,
-      image: 'https://myexam.allen.in/wp-content/uploads/2024/07/JoSAA-Counselling-2024-Final-Round-Seat-Allotment-Released.jpg',
-      title: 'Blog title goes here',
-      description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, adipisci!',
-      date: '21st May, 2022',
-      author: 'admin',
-      about:"",
-      content: 'Full content of the blog post...'
+    id: 3,
+    image: Infinite_Eduverse,
+    title: 'Why Infinite EduVerse is the Best Choice for NEET and JEE Preparation',
+    description: 'Infinite EduVerse stands out as a premier institute for NEET and JEE preparation, offering exceptional resources, faculty, and support systems to ensure student success.',
+    date: '29th July, 2024',
+    author: 'John Doe, Education Analyst',
+    about: "",
+    content: `<div>
+  
+    <h3 style="font-weight: 600; font-size: 1.5rem; padding-top: 1rem; padding-bottom: 1rem;">Introduction</h3>
+    <p>
+      Infinite EduVerse has emerged as a leading name in the realm of competitive exam preparation, particularly for NEET and JEE. With a commitment to excellence and a student-centric approach, Infinite EduVerse has become the preferred choice for countless aspirants aiming to secure top ranks in these highly competitive exams.
+    </p>
+  
+    <h3 style="font-weight: 600; font-size: 1.5rem; padding-top: 1rem; padding-bottom: 1rem;">Exceptional Faculty</h3>
+    <p>
+      One of the most significant factors contributing to Infinite EduVerse's success is its team of highly qualified and experienced faculty members. These educators bring a wealth of knowledge and expertise, ensuring that students receive the best guidance and support in their preparation journey.
+    </p>
+  
+    <h3 style="font-weight: 600; font-size: 1.5rem; padding-top: 1rem; padding-bottom: 1rem;">Comprehensive Study Material</h3>
+    <ul style="list-style-type: disc; font-size: 1.125rem; font-weight: 500; color: #8B0000; padding-left: 1.25rem;">
+      <li>
+        <strong>In-depth Coverage:</strong> The study material provided by Infinite EduVerse covers every topic in detail, ensuring students have a thorough understanding of the concepts.
+      </li>
+      <li>
+        <strong>Regular Updates:</strong> The material is regularly updated to reflect the latest exam patterns and syllabus changes, keeping students well-prepared for any new developments.
+      </li>
+      <li>
+        <strong>Practice Questions:</strong> A vast array of practice questions and mock tests are included, enabling students to test their knowledge and improve their problem-solving skills.
+      </li>
+    </ul>
+  
+    <h3 style="font-weight: 600; font-size: 1.5rem; padding-top: 1rem; padding-bottom: 1rem;">State-of-the-Art Infrastructure</h3>
+    <ul style="list-style-type: disc; font-size: 1.125rem; font-weight: 500; color: #8B0000; padding-left: 1.25rem;">
+      <li>
+        <strong>Modern Classrooms:</strong> Equipped with the latest technology, the classrooms at Infinite EduVerse provide an optimal learning environment.
+      </li>
+      <li>
+        <strong>Library and Resources:</strong> The institute boasts a well-stocked library with extensive resources, including reference books, journals, and digital materials.
+      </li>
+      <li>
+        <strong>Online Learning:</strong> Infinite EduVerse offers robust online learning platforms, ensuring students can access quality education from anywhere.
+      </li>
+    </ul>
+  
+    <h3 style="font-weight: 600; font-size: 1.5rem; padding-top: 1rem; padding-bottom: 1rem;">Personalized Attention and Mentorship</h3>
+    <p>
+      At Infinite EduVerse, each student receives personalized attention and mentorship. This individualized approach helps in addressing the unique strengths and weaknesses of every student, providing them with tailored guidance to achieve their goals.
+    </p>
+  
+    <h3 style="font-weight: 600; font-size: 1.5rem; padding-top: 1rem; padding-bottom: 1rem;">Excellent Track Record</h3>
+    <ul style="list-style-type: disc; font-size: 1.125rem; font-weight: 500; color: #8B0000; padding-left: 1.25rem;">
+      <li>
+        <strong>Top Ranks:</strong> Infinite EduVerse has consistently produced top rankers in NEET and JEE, showcasing the effectiveness of its teaching methodology.
+      </li>
+      <li>
+        <strong>High Success Rate:</strong> The institute has a high success rate, with a significant percentage of its students securing admission to prestigious medical and engineering colleges.
+      </li>
+      <li>
+        <strong>Alumni Achievements:</strong> The achievements of its alumni in various fields further highlight the quality of education and training provided by Infinite EduVerse.
+      </li>
+    </ul>
+  
+    <h3 style="font-weight: 600; font-size: 1.5rem; padding-top: 1rem; padding-bottom: 1rem;">Holistic Development</h3>
+    <p>
+      Beyond academics, Infinite EduVerse focuses on the holistic development of its students. It organizes various extracurricular activities, workshops, and seminars to enhance their overall growth and prepare them for future challenges.
+    </p>
+  
+    <h3 style="font-weight: 600; font-size: 1.5rem; padding-top: 1rem; padding-bottom: 1rem;">Student Support Services</h3>
+    <ul style="list-style-type: disc; font-size: 1.125rem; font-weight: 500; color: #8B0000; padding-left: 1.25rem;">
+      <li>
+        <strong>Counseling and Guidance:</strong> Professional counselors are available to provide academic and career guidance, helping students make informed decisions.
+      </li>
+      <li>
+        <strong>Doubt Clearing Sessions:</strong> Regular doubt clearing sessions ensure that students can resolve their queries promptly and effectively.
+      </li>
+      <li>
+        <strong>Peer Support:</strong> The collaborative environment at Infinite EduVerse fosters peer support and encourages healthy competition.
+      </li>
+    </ul>
+  
+    <h3 style="font-weight: 600; font-size: 1.5rem; padding-top: 1rem; padding-bottom: 1rem;">Moving Forward</h3>
+    <p>
+      Infinite EduVerse continues to set new benchmarks in the field of NEET and JEE preparation. With its unwavering commitment to quality education and student success, the institute is poised to remain a top choice for aspirants across the country.
+    </p>
+    <p>
+      By choosing Infinite EduVerse, students are not just preparing for exams; they are building a strong foundation for their future careers. The institute's holistic approach ensures that students are well-equipped to face the challenges ahead and achieve their dreams.
+    </p>
+  
+    <h3 style="font-weight: 600; font-size: 1.5rem; padding-top: 1rem; padding-bottom: 1rem;">Call to Action</h3>
+    <p>
+      If you are an aspiring NEET or JEE candidate, Infinite EduVerse offers the perfect blend of resources, guidance, and support to help you succeed. Enroll now and take the first step towards realizing your dreams. For more information, visit our website or contact our admissions office today.
+    </p>
+  </div>`
   },
   {
       id: 4,
@@ -242,7 +330,7 @@ const BlogPage = () => {
                                 </a>
                             </div>
                             <div className="col-auto d-none d-lg-block">
-                                <img src="https://myexam.allen.in/wp-content/uploads/2024/07/JoSAA-Counselling-2024-Round-4-Seat-Allotment-Released.jpg" alt="" style={{width:"300px", height:"250px"}}/>
+                                <img src={Infinite_Eduverse} alt="" style={{width:"300px", height:"250px"}}/>
                             </div>
                         </div>
                     </div>
@@ -253,13 +341,13 @@ const BlogPage = () => {
                                 <h3 className="mb-0">Post title</h3>
                                 <div className="mb-1 text-body-secondary">Nov 11</div>
                                 <p className="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                                <a href="#" className="icon-link gap-1 icon-link-hover stretched-link">
-                                    Continue reading
+                                <a href={post.id} className="icon-link gap-1 icon-link-hover text-blue-600 stretched-link">
+                                    Continue reading..
                                     <svg className="bi"><use xlinkHref="#chevron-right"></use></svg>
                                 </a>
                             </div>
                             <div className="col-auto d-none d-lg-block">
-                                <img src="https://myexam.allen.in/wp-content/uploads/2024/07/JoSAA-Counselling-2024-Final-Round-Seat-Allotment-Released.jpg" alt="" style={{width:"300px", height:"250px"}}/>
+                              <img src={Neet_Scam} alt="" style={{width:"300px", height:"250px"}}/>
                             </div>
                         </div>
                     </div>
