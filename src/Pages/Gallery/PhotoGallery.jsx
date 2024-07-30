@@ -6,19 +6,19 @@ import { GrGallery } from "react-icons/gr";
 
 const eventPhotos = {
   "short-title": [
-    { src: 'https://princeschoolsikar.com/assets/result/12-2022.jpg', alt: 'A boy surrounded by beautiful nature' },
+    // { src: 'https://princeschoolsikar.com/assets/result/12-2022.jpg', alt: 'A boy surrounded by beautiful nature' },
     { src: 'https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=400', alt: 'A boy surrounded by beautiful nature' },
     { src: 'https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=400', alt: 'A boy surrounded by beautiful nature' },
     { src: 'https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=400', alt: 'A boy surrounded by beautiful nature' },
-    { src: 'https://princeschoolsikar.com/assets/result/12-2022.jpg', alt: 'A boy surrounded by beautiful nature' },
+    // { src: 'https://princeschoolsikar.com/assets/result/12-2022.jpg', alt: 'A boy surrounded by beautiful nature' },
     { src: 'https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=400', alt: 'A boy surrounded by beautiful nature' },
     { src: 'https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=400', alt: 'A boy surrounded by beautiful nature' },
     { src: 'https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=400', alt: 'A boy surrounded by beautiful nature' },
-    { src: 'https://princeschoolsikar.com/assets/result/12-2022.jpg', alt: 'A boy surrounded by beautiful nature' },
+    // { src: 'https://princeschoolsikar.com/assets/result/12-2022.jpg', alt: 'A boy surrounded by beautiful nature' },
     { src: 'https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=400', alt: 'A boy surrounded by beautiful nature' },
     { src: 'https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=400', alt: 'A boy surrounded by beautiful nature' },
     { src: 'https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=400', alt: 'A boy surrounded by beautiful nature' },
-    { src: 'https://princeschoolsikar.com/assets/result/12-2022.jpg', alt: 'A boy surrounded by beautiful nature' },
+    // { src: 'https://princeschoolsikar.com/assets/result/12-2022.jpg', alt: 'A boy surrounded by beautiful nature' },
     { src: 'https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&w=400', alt: 'A boy surrounded by beautiful nature' },
     { src: 'https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=400', alt: 'A boy surrounded by beautiful nature' },
     { src: 'https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=400', alt: 'A boy surrounded by beautiful nature' },
@@ -135,11 +135,11 @@ const PhotoGallery = () => {
 
     return (
         <>
-            <div className={styles.blogBanner}>
-                <div className={styles.headingBanner}>
-                    <h1 className={styles.headingBanner}><GrGallery className={styles.bannerIcon} />Photo Gallery</h1>
-                </div>
+            <div className="w-full bg-gray-800 h-40 mt-20 flex items-center justify-center">
+            <div className="w-5/6 mx-auto">
+                <h1 className="text-center text-white text-4xl"><GrGallery className="inline mr-2" />Photoes</h1>
             </div>
+        </div>
 
             <div className={`${styles.lightGreyBackground} ${styles.contentContainer}`}>
                 <div className={styles.gridButtons}>

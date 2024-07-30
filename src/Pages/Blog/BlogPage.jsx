@@ -4,11 +4,12 @@ import { useParams } from 'react-router-dom';
 import './BlogPage.css';
 import Neet_Scam from '../../assets/photoes/Neet_Scam.png'
 import Infinite_Eduverse from '../../assets/photoes/blog.jpg'
+import Roorkee from '../../assets/photoes/Roorkee.jpg'
 
 const blogPosts = [
         {
             id: 1,
-            image: 'https://www.iitr.ac.in/assets/56f4da26ed956730309fa1488611ee0f13b0ac95ebb1bc9b5d210e31ff70e79c_IITR12.jpg',
+            image: Roorkee,
             title: 'Inspiring Success: The Journey to IIT Roorkee',
             description: 'The journey to IIT Roorkee begins with the dream of countless JEE aspirants across India. The Joint Entrance Examination (JEE) is not just a test; it\'s a gateway to prestigious institutions like IIT Roorkee, known for its illustrious history, academic excellence, and transformative impact on students\' lives.',
             date: '24th July, 2024',
