@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import emailjs from "@emailjs/browser";
 import styles from './AdmissionForm.module.css';
 import { FaCheckCircle } from 'react-icons/fa';
@@ -6,7 +6,10 @@ import { SiGoogleforms } from "react-icons/si";
 import { AiOutlineForm } from "react-icons/ai";
 
 const AdmissionForm = () => {
-    window.scrollTo(0, 0);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -14,7 +17,9 @@ const AdmissionForm = () => {
         course: '',
         message: ''
     });
+
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [phoneError, setPhoneError] = useState('');
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -24,8 +29,27 @@ const AdmissionForm = () => {
         });
     };
 
+    const handlePhoneChange = (e) => {
+        const { value } = e.target;
+        // Allow only numbers (0-9) and empty value
+        if (/^[0-9]*$/.test(value)) {
+            setFormData({
+                ...formData,
+                phone: value
+            });
+            setPhoneError(''); // Clear error message if valid
+        } else {
+            setPhoneError('Please enter only numbers.'); // Set error message if invalid
+        }
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        // Check if there's an error before submission
+        if (phoneError) {
+            return; // Prevent form submission if there's an error
+        }
 
         const templateParams = {
             first_name: formData.name,
@@ -88,7 +112,7 @@ const AdmissionForm = () => {
                             <input
                                 type="text"
                                 id="name"
-                                name="name"  // Update name attribute to match formData key
+                                name="name"
                                 value={formData.name}
                                 onChange={handleChange}
                                 required
@@ -113,11 +137,14 @@ const AdmissionForm = () => {
                                 type="tel"
                                 id="phone"
                                 name="phone"
+                                maxLength={10}
+                                minLength={10}
                                 value={formData.phone}
-                                onChange={handleChange}
+                                onChange={handlePhoneChange}
                                 required
                                 className='p-1'
                             />
+                            {phoneError && <span className={styles.error}>{phoneError}</span>} {/* Display error message */}
                         </div>
                         <div className={styles.formGroup}>
                             <label htmlFor="course">Inquiry For:</label>
