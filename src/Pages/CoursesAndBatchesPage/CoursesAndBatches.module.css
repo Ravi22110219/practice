@@ -73,7 +73,7 @@
 .courseBatch:hover {
   transform: translateY(-10px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #ff8000;
+  background: linear-gradient(90deg,#ff512f,#f09819),linear-gradient(270deg,#fffdea,rgba(255,253,234,0));
   color: #f1f1f1;
 }
 

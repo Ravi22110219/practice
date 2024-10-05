@@ -71,6 +71,8 @@
 
 .courseBox:hover {
   transform: scale(1.05);
+  background: linear-gradient(90deg,#ff512f,#f09819),linear-gradient(270deg,#fffdea,rgba(255,253,234,0));
+  color: white;
 }
 
 .courseBoxTop {
@@ -100,6 +102,11 @@
   color: var(--text-clr);
 }
 
+.courseBox:hover .courseDesc h2,
+.courseBox:hover .courseDesc p {
+  color: white;
+}
+
 .courseBtn {
   border: none;
   padding: 6px 12px;
@@ -114,8 +121,8 @@
 }
 
 .courseBtn:hover {
-  background-color: #fbc980;
-  color: var(--heading-clr);
+  background-color: #1d1d1d;
+ 
 }
 
 @media(max-width: 1100px) {
