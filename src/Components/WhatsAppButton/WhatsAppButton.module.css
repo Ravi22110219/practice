@@ -18,6 +18,19 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  animation: autoRotateAnimation;
+  animation-timeline: scroll();
+  
+}
+
+@keyframes autoRotateAnimation{
+  from{
+    transform: rotate(0deg);
+
+  }
+  to{
+    transform: rotate(360deg);
+  }
 }
 
 .whatsAppButton:hover {
